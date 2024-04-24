@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct SetupTimeliStart: View {
     var body: some View {
@@ -61,6 +62,8 @@ struct SetUpFeatures: View {
             HStack{
                 NavigationLink{
                     ContentView().navigationBarBackButtonHidden(true) // Hide the "Back" button
+                    
+
                 } label: {
                     RoundedRectangle(cornerRadius: 15)
                         .frame(width: 135, height: 65, alignment: .center)
@@ -76,6 +79,7 @@ struct SetUpFeatures: View {
             UserDefaults.standard.set(enableNotes, forKey: "enableNotes")
             UserDefaults.standard.set(enableReminders, forKey: "enableReminder")
             UserDefaults.standard.set(enableToDo, forKey: "enableToDo")
+            UserDefaults.standard.set(true, forKey: "isSetUp")
             // Debug (Checks whether preferences are saved properly)
             print("Notes: \(UserDefaults.standard.bool(forKey: "enableNotes"))\nReminders: \(UserDefaults.standard.bool(forKey: "enableReminder"))\nToDo: \(UserDefaults.standard.bool(forKey: "enableToDo"))")
         }

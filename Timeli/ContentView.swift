@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import UserNotifications
 struct ContentView: View {
     @AppStorage("currentView") private var currentView = 0
     var body: some View{
@@ -35,6 +35,13 @@ struct ContentView: View {
             
         }
         .onAppear(){
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+                if granted {
+                    print("Notification authorization granted")
+                } else {
+                    print("Notification authorization denied")
+                }
+            }
             currentView = 0
         }
     }
