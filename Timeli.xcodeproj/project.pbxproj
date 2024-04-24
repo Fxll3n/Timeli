@@ -18,6 +18,8 @@
 		140D39F02BD941630036DBAE /* TabViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39EF2BD941630036DBAE /* TabViewerView.swift */; };
 		140D39F22BD941960036DBAE /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39F12BD941960036DBAE /* ToDoView.swift */; };
 		140D39F52BD943010036DBAE /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 140D39F42BD943010036DBAE /* Markdown */; };
+		140D39F72BD94BB90036DBAE /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39F62BD94BB90036DBAE /* RemindersView.swift */; };
+		140D39F92BD94C100036DBAE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39F82BD94C100036DBAE /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		140D39ED2BD9412E0036DBAE /* TabViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewButton.swift; sourceTree = "<group>"; };
 		140D39EF2BD941630036DBAE /* TabViewerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewerView.swift; sourceTree = "<group>"; };
 		140D39F12BD941960036DBAE /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
+		140D39F62BD94BB90036DBAE /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
+		140D39F82BD94C100036DBAE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +73,13 @@
 				140D39D82BD93FF00036DBAE /* TimeliApp.swift */,
 				140D39DA2BD93FF00036DBAE /* ContentView.swift */,
 				140D39E72BD9406E0036DBAE /* DataModel.swift */,
-				140D39E92BD940A00036DBAE /* NotesView.swift */,
 				140D39EB2BD940D20036DBAE /* SetUpTImeli.swift */,
-				140D39ED2BD9412E0036DBAE /* TabViewButton.swift */,
 				140D39EF2BD941630036DBAE /* TabViewerView.swift */,
+				140D39ED2BD9412E0036DBAE /* TabViewButton.swift */,
+				140D39E92BD940A00036DBAE /* NotesView.swift */,
+				140D39F62BD94BB90036DBAE /* RemindersView.swift */,
 				140D39F12BD941960036DBAE /* ToDoView.swift */,
+				140D39F82BD94C100036DBAE /* SettingsView.swift */,
 				140D39DC2BD93FF10036DBAE /* Assets.xcassets */,
 				140D39DE2BD93FF10036DBAE /* Timeli.entitlements */,
 				140D39DF2BD93FF10036DBAE /* Preview Content */,
@@ -170,9 +176,11 @@
 				140D39F22BD941960036DBAE /* ToDoView.swift in Sources */,
 				140D39EC2BD940D20036DBAE /* SetUpTImeli.swift in Sources */,
 				140D39EA2BD940A00036DBAE /* NotesView.swift in Sources */,
+				140D39F92BD94C100036DBAE /* SettingsView.swift in Sources */,
 				140D39EE2BD9412E0036DBAE /* TabViewButton.swift in Sources */,
 				140D39E82BD9406E0036DBAE /* DataModel.swift in Sources */,
 				140D39F02BD941630036DBAE /* TabViewerView.swift in Sources */,
+				140D39F72BD94BB90036DBAE /* RemindersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
