@@ -11,7 +11,7 @@
 		140D39DB2BD93FF00036DBAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39DA2BD93FF00036DBAE /* ContentView.swift */; };
 		140D39DD2BD93FF10036DBAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140D39DC2BD93FF10036DBAE /* Assets.xcassets */; };
 		140D39E12BD93FF10036DBAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140D39E02BD93FF10036DBAE /* Preview Assets.xcassets */; };
-		140D39E82BD9406E0036DBAE /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39E72BD9406E0036DBAE /* DataModel.swift */; };
+		140D39E82BD9406E0036DBAE /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39E72BD9406E0036DBAE /* NotesModel.swift */; };
 		140D39EA2BD940A00036DBAE /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39E92BD940A00036DBAE /* NotesView.swift */; };
 		140D39EC2BD940D20036DBAE /* SetUpTImeli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39EB2BD940D20036DBAE /* SetUpTImeli.swift */; };
 		140D39EE2BD9412E0036DBAE /* TabViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39ED2BD9412E0036DBAE /* TabViewButton.swift */; };
@@ -29,7 +29,7 @@
 		140D39DC2BD93FF10036DBAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		140D39DE2BD93FF10036DBAE /* Timeli.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Timeli.entitlements; sourceTree = "<group>"; };
 		140D39E02BD93FF10036DBAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		140D39E72BD9406E0036DBAE /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		140D39E72BD9406E0036DBAE /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 		140D39E92BD940A00036DBAE /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		140D39EB2BD940D20036DBAE /* SetUpTImeli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpTImeli.swift; sourceTree = "<group>"; };
 		140D39ED2BD9412E0036DBAE /* TabViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewButton.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 			children = (
 				140D39D82BD93FF00036DBAE /* TimeliApp.swift */,
 				140D39DA2BD93FF00036DBAE /* ContentView.swift */,
-				140D39E72BD9406E0036DBAE /* DataModel.swift */,
+				140D39E72BD9406E0036DBAE /* NotesModel.swift */,
 				140D39EB2BD940D20036DBAE /* SetUpTImeli.swift */,
 				140D39EF2BD941630036DBAE /* TabViewerView.swift */,
 				140D39ED2BD9412E0036DBAE /* TabViewButton.swift */,
@@ -178,7 +178,7 @@
 				140D39EA2BD940A00036DBAE /* NotesView.swift in Sources */,
 				140D39F92BD94C100036DBAE /* SettingsView.swift in Sources */,
 				140D39EE2BD9412E0036DBAE /* TabViewButton.swift in Sources */,
-				140D39E82BD9406E0036DBAE /* DataModel.swift in Sources */,
+				140D39E82BD9406E0036DBAE /* NotesModel.swift in Sources */,
 				140D39F02BD941630036DBAE /* TabViewerView.swift in Sources */,
 				140D39F72BD94BB90036DBAE /* RemindersView.swift in Sources */,
 			);
