@@ -6,7 +6,11 @@
 //
 //  EXPERIMENTAL: For now. Don't include inside of main.
 //  Functionality tested inside of Playgrounds and migrated.
-
+/*
+ 
+ Sorry Mathew, Had to comment out to test app.
+ 
+ 
 import Foundation
 import SwiftUI
 import UIKit
@@ -15,7 +19,7 @@ class ViewController: UIViewController {
     let documentInteractionController = UIDocumentInteractionController()
     
     func createFile() {
-        let text = mdContent
+        let text = mdContent // Error: Cannot Find 'mdContent' in scope!
         let filename = getDocumentsDirectory().appendingPathComponent("example.md")
         
         do {
@@ -48,3 +52,4 @@ class ViewController: UIViewController {
 // https://reintech.io/blog/working-with-files-directories-ios-apps#google_vignette
 //
 // https://stackoverflow.com/questions/39722844/core-data-files-location-ios-10
+*/

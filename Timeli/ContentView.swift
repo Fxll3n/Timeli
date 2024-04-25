@@ -18,6 +18,7 @@ struct ContentView: View {
                 RemindersView()
             }else if currentView == 2{
                 ToDoListView()
+                    .modelContainer(for: ToDoModel.self)
             }else if currentView == 3{
                 SettingsView()
             }
