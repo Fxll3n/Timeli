@@ -20,6 +20,7 @@
 		140D39F52BD943010036DBAE /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 140D39F42BD943010036DBAE /* Markdown */; };
 		140D39F72BD94BB90036DBAE /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39F62BD94BB90036DBAE /* RemindersView.swift */; };
 		140D39F92BD94C100036DBAE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39F82BD94C100036DBAE /* SettingsView.swift */; };
+		845150EC2BDAE61200D9DDA2 /* autoSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845150EB2BDAE61200D9DDA2 /* autoSave.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		140D39F12BD941960036DBAE /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		140D39F62BD94BB90036DBAE /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
 		140D39F82BD94C100036DBAE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		845150EB2BDAE61200D9DDA2 /* autoSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autoSave.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				140D39DC2BD93FF10036DBAE /* Assets.xcassets */,
 				140D39DE2BD93FF10036DBAE /* Timeli.entitlements */,
 				140D39DF2BD93FF10036DBAE /* Preview Content */,
+				845150EB2BDAE61200D9DDA2 /* autoSave.swift */,
 			);
 			path = Timeli;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				140D39EC2BD940D20036DBAE /* SetUpTImeli.swift in Sources */,
 				140D39EA2BD940A00036DBAE /* NotesView.swift in Sources */,
 				140D39F92BD94C100036DBAE /* SettingsView.swift in Sources */,
+				845150EC2BDAE61200D9DDA2 /* autoSave.swift in Sources */,
 				140D39EE2BD9412E0036DBAE /* TabViewButton.swift in Sources */,
 				140D39E82BD9406E0036DBAE /* NotesModel.swift in Sources */,
 				140D39F02BD941630036DBAE /* TabViewerView.swift in Sources */,
