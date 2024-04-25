@@ -1,5 +1,5 @@
 //
-//  DataModel.swift
+//  NotesModel.swift
 //  Timeli
 //
 //  Created by Angel Bitsov on 4/17/24.
@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class DataModel: Identifiable {
+class NotesModel: Identifiable {
     var id: String
     var noteTitle: String
     var noteText: String
