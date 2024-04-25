@@ -10,6 +10,7 @@ import SwiftUI
 struct ToDoListView: View {
     
     @State var List = []
+    @State var List: String = ""
     
     var body: some View {
         VStack {
@@ -17,8 +18,11 @@ struct ToDoListView: View {
                 .bold()
                 .underline()
                 .font(.title)
-            
-            SwiftUI.List {
+            TextField("Activity", text: $List)
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Text("+")
+            })
+                SwiftUI.List {
                 ForEach (0..<List.count, id: \.self){ToDoList in
                 }
             }
