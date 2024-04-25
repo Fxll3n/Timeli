@@ -13,7 +13,7 @@ struct NotesView: View {
     
     @State var isEditing = false
     
-    @State private var text = "abcdefghijklmnopqrstuvwxyz\n**abcdefghijklmnopqrstuvwxyz**\n*abcdefghijklmnopqrstuvwxyz*\n~abcdefghijklmnopqrstuvwxyz~\n# abcdefghijklmnopqrstuvwxyz"
+    @State private var mdContent = "abcdefghijklmnopqrstuvwxyz\n**abcdefghijklmnopqrstuvwxyz**\n*abcdefghijklmnopqrstuvwxyz*\n~abcdefghijklmnopqrstuvwxyz~\n# abcdefghijklmnopqrstuvwxyz"
     var body: some View {
         VStack{
             HStack{
@@ -27,16 +27,32 @@ struct NotesView: View {
             }
             
             if isEditing{
-                TextEditor(text: $text)
+                TextEditor(text: $mdContent)
             }else{
-                Markdown(content: $text)
+                Markdown(content: $mdContent)
             }
         }
     }
     
-    
+    func createFile() {
+        let filename = getDocumentsDirectory().appendingPathComponent("example.md")
+        
+        do {
+            try mdContent.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+            print("File created successfully")
+        } catch {
+            print("Unable to write to file")
+        }
+    }
+
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
     
 }
+
+
 
 
 

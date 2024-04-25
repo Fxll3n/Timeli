@@ -19,6 +19,6 @@ struct TimeliApp: App {
                 SetupTimeliStart()
             }
         }
-        .modelContainer(for: NotesModel.self)
+        .modelContainer(for: ToDoModel.self)
     }
 }

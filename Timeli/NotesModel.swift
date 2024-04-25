@@ -9,14 +9,14 @@ import Foundation
 import SwiftData
 
 @Model
-class NotesModel: Identifiable {
+class ToDoModel: Identifiable {
     var id: String
-    var noteTitle: String
-    var noteText: String
+    var title: String
+    var text: String
     
-    init(noteTitle: String, noteText: String) {
+    init(title: String, text: String) {
         self.id = UUID().uuidString
-        self.noteTitle = noteTitle
-        self.noteText = noteText
+        self.title = title
+        self.text = text
     }
 }

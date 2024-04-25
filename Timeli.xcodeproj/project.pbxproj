@@ -20,6 +20,9 @@
 		140D39F52BD943010036DBAE /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 140D39F42BD943010036DBAE /* Markdown */; };
 		140D39F72BD94BB90036DBAE /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39F62BD94BB90036DBAE /* RemindersView.swift */; };
 		140D39F92BD94C100036DBAE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39F82BD94C100036DBAE /* SettingsView.swift */; };
+		14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95032BDB02450091CFAF /* NewToDoItemView.swift */; };
+		14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95052BDB02520091CFAF /* ToDoItemView.swift */; };
+		845150EC2BDAE61200D9DDA2 /* autoSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845150EB2BDAE61200D9DDA2 /* autoSave.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		140D39F12BD941960036DBAE /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		140D39F62BD94BB90036DBAE /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
 		140D39F82BD94C100036DBAE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		14DF95032BDB02450091CFAF /* NewToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoItemView.swift; sourceTree = "<group>"; };
+		14DF95052BDB02520091CFAF /* ToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemView.swift; sourceTree = "<group>"; };
+		845150EB2BDAE61200D9DDA2 /* autoSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autoSave.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +85,13 @@
 				140D39E92BD940A00036DBAE /* NotesView.swift */,
 				140D39F62BD94BB90036DBAE /* RemindersView.swift */,
 				140D39F12BD941960036DBAE /* ToDoView.swift */,
+				14DF95032BDB02450091CFAF /* NewToDoItemView.swift */,
+				14DF95052BDB02520091CFAF /* ToDoItemView.swift */,
 				140D39F82BD94C100036DBAE /* SettingsView.swift */,
 				140D39DC2BD93FF10036DBAE /* Assets.xcassets */,
 				140D39DE2BD93FF10036DBAE /* Timeli.entitlements */,
 				140D39DF2BD93FF10036DBAE /* Preview Content */,
+				845150EB2BDAE61200D9DDA2 /* autoSave.swift */,
 			);
 			path = Timeli;
 			sourceTree = "<group>";
@@ -172,11 +181,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				140D39DB2BD93FF00036DBAE /* ContentView.swift in Sources */,
+				14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */,
 				140D39D92BD93FF00036DBAE /* TimeliApp.swift in Sources */,
+				14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */,
 				140D39F22BD941960036DBAE /* ToDoView.swift in Sources */,
 				140D39EC2BD940D20036DBAE /* SetUpTImeli.swift in Sources */,
 				140D39EA2BD940A00036DBAE /* NotesView.swift in Sources */,
 				140D39F92BD94C100036DBAE /* SettingsView.swift in Sources */,
+				845150EC2BDAE61200D9DDA2 /* autoSave.swift in Sources */,
 				140D39EE2BD9412E0036DBAE /* TabViewButton.swift in Sources */,
 				140D39E82BD9406E0036DBAE /* NotesModel.swift in Sources */,
 				140D39F02BD941630036DBAE /* TabViewerView.swift in Sources */,

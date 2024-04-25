@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ToDoListView: View {
     
-    @State var List = []
+    @Environment(\.modelContext) private var context
+    @Query private var items: [ToDoModel]
+    
+    @State private var isMakingNewItem = false
     
     var body: some View {
         VStack {
@@ -17,14 +21,18 @@ struct ToDoListView: View {
                 .bold()
                 .underline()
                 .font(.title)
-            
-            SwiftUI.List {
-                ForEach (0..<List.count, id: \.self){ToDoList in
+            Button("+"){
+                isMakingNewItem.toggle()
+            }
+            .sheet(isPresented: $isMakingNewItem){
+                NewToDoItemView()
+            }
+            List{
+                ForEach(items) { item in
+                    ToDoItemView(title: item.title, text: item.text)
                 }
             }
+            
         }
     }
-}
-#Preview {
-    ToDoListView(List: [])
 }
