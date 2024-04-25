@@ -1,4 +1,3 @@
-# Timeli
 ![logo](TimeliLogoPNG.png)
 <p align="center">
     <h1 align="center">TIMELI</h1>
