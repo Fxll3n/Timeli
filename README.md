@@ -1,4 +1,4 @@
-![logo](TimeliLogoPNG.png)
+
 <p align="center">
     <h1 align="center">TIMELI</h1>
 </p>
@@ -13,6 +13,8 @@
 <p>
 <p align="center">
 		<em>Developed with the software and tools below.</em>
+		
+	
 </p>
 <p align="center">
 	</p>
@@ -22,14 +24,6 @@
 
 > - [ Overview](#-overview)
 > - [ Features](#-features)
-> - [ Repository Structure](#-repository-structure)
-> - [ Modules](#-modules)
-> - [ Getting Started](#-getting-started)
->   - [ Installation](#-installation)
->   - [ Running Timeli](#-running-Timeli)
->   - [ Tests](#-tests)
-> - [ Project Roadmap](#-project-roadmap)
-> - [ Contributing](#-contributing)
 > - [ License](#-license)
 > - [ Acknowledgments](#-acknowledgments)
 
@@ -39,28 +33,30 @@
 
 Timeli is a minimal note taking app inspired by Notion's simple interface. We, the Timeli developers, despise an interface where you are bombarded with features and notifications.
 For that reason, everything in Timeli is customizable and minimal. With Timeli, you should do things your way.
-
+![logo](TimeliLogoPNG.png)
 ---
 
 ##  Features
 
---Features Here--
-
+Timeli's features are COMPLETELY CUSTOMIZABLE. Meaning that you can chose, edit, and modify the features to suit you in the best way possible. Currently, Timeli has 4 confirmed features:
+1. **MarkDown based note system** - Write down notes using markdown to make them look clean and professional.
+2. **Reminders** - Reminders are optimized Calendar events that have been crafted for simplicity and efficency, while still keeping a minimal and fresh look. (Uses notifications)
+3. **To-Do List** - Simple but powerful To-Do list to keep track of any tasks you may have. 
+4. **Settings Menu** - In the settings menu, you are given full freedom on what features you want, and how they look.
 ---
-
-##  Getting Started
-
-Download on App Store(When it comes out)
 
 ##  License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+This project is protected under the [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/) License. For more details, refer to the [LICENSE](https://github.com/Fxll3n/Timeli/blob/main/LICENSE) file.
 
 ---
 
 ##  Acknowledgments
 
-- List any resources, contributors, inspiration, etc. here.
+- Angel Y. Bitsov - Lead Developer
+- Matthew Dudzinski - Developer
+- Benjamin Anabe - Developer/Graphics
+- Shneider Lambert - Developer
 
 [**Return**](#-quick-links)
 
