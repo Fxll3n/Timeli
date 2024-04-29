@@ -1,6 +1,7 @@
 
 <p align="center">
     <h1 align="center">TIMELI</h1>
+	![alt text](https://github.com/Fxll3n/Timeli/blob/main/Logo.png?raw=true)
 </p>
 <p align="center">
     <em>A New Era Of Note Taking</em>
