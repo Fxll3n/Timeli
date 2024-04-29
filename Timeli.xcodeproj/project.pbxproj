@@ -78,20 +78,15 @@
 			children = (
 				140D39D82BD93FF00036DBAE /* TimeliApp.swift */,
 				140D39DA2BD93FF00036DBAE /* ContentView.swift */,
-				140D39E72BD9406E0036DBAE /* NotesModel.swift */,
-				140D39EB2BD940D20036DBAE /* SetUpTImeli.swift */,
-				140D39EF2BD941630036DBAE /* TabViewerView.swift */,
-				140D39ED2BD9412E0036DBAE /* TabViewButton.swift */,
-				140D39E92BD940A00036DBAE /* NotesView.swift */,
-				140D39F62BD94BB90036DBAE /* RemindersView.swift */,
-				140D39F12BD941960036DBAE /* ToDoView.swift */,
-				14DF95032BDB02450091CFAF /* NewToDoItemView.swift */,
-				14DF95052BDB02520091CFAF /* ToDoItemView.swift */,
-				140D39F82BD94C100036DBAE /* SettingsView.swift */,
+				14175BDF2BE0230C00F775A7 /* Models */,
+				14175BE02BE0232C00F775A7 /* Notes */,
+				14175BE32BE0239900F775A7 /* Reminders */,
+				14175BE22BE0237700F775A7 /* ToDo */,
+				14175BE42BE023BB00F775A7 /* Settings */,
+				14175BE52BE0268300F775A7 /* TabViewer */,
 				140D39DC2BD93FF10036DBAE /* Assets.xcassets */,
 				140D39DE2BD93FF10036DBAE /* Timeli.entitlements */,
 				140D39DF2BD93FF10036DBAE /* Preview Content */,
-				845150EB2BDAE61200D9DDA2 /* autoSave.swift */,
 			);
 			path = Timeli;
 			sourceTree = "<group>";
@@ -102,6 +97,59 @@
 				140D39E02BD93FF10036DBAE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		14175BDF2BE0230C00F775A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				140D39E72BD9406E0036DBAE /* NotesModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		14175BE02BE0232C00F775A7 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				140D39E92BD940A00036DBAE /* NotesView.swift */,
+				845150EB2BDAE61200D9DDA2 /* autoSave.swift */,
+			);
+			name = Notes;
+			sourceTree = "<group>";
+		};
+		14175BE22BE0237700F775A7 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				140D39F12BD941960036DBAE /* ToDoView.swift */,
+				14DF95032BDB02450091CFAF /* NewToDoItemView.swift */,
+				14DF95052BDB02520091CFAF /* ToDoItemView.swift */,
+			);
+			name = ToDo;
+			sourceTree = "<group>";
+		};
+		14175BE32BE0239900F775A7 /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				140D39F62BD94BB90036DBAE /* RemindersView.swift */,
+			);
+			name = Reminders;
+			sourceTree = "<group>";
+		};
+		14175BE42BE023BB00F775A7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				140D39EB2BD940D20036DBAE /* SetUpTImeli.swift */,
+				140D39F82BD94C100036DBAE /* SettingsView.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		14175BE52BE0268300F775A7 /* TabViewer */ = {
+			isa = PBXGroup;
+			children = (
+				140D39EF2BD941630036DBAE /* TabViewerView.swift */,
+				140D39ED2BD9412E0036DBAE /* TabViewButton.swift */,
+			);
+			name = TabViewer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
