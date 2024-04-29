@@ -6,7 +6,6 @@
     <em>A New Era Of Note Taking</em>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/license/Fxll3n/Timeli?style=flat&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/Fxll3n/Timeli?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/Fxll3n/Timeli?style=flat&color=0080ff" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/Fxll3n/Timeli?style=flat&color=0080ff" alt="repo-language-count">
@@ -57,6 +56,9 @@ This project is protected under the [GNU GPLv3](https://choosealicense.com/licen
 - Matthew Dudzinski - Developer
 - Benjamin Anabe - Developer/Graphics
 - Shneider Lambert - Developer
+
+## Disclaimer
+- This app IS NOT open source, you cannot use our code for any purpose or reason.
 
 [**Return**](#-quick-links)
 
