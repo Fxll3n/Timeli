@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct RemindersView: View {
+
     
     @Environment(\.modelContext) private var context
     @Query private var items: [RemindModel]

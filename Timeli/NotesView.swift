@@ -10,7 +10,7 @@ import Markdown
 
 struct NotesView: View {
     @Environment(\.modelContext) private var context
-    
+    @EnvironmentObject var contentModel: ContentModel
     @State var isEditing = false
     
     @State private var mdContent = "abcdefghijklmnopqrstuvwxyz\n**abcdefghijklmnopqrstuvwxyz**\n*abcdefghijklmnopqrstuvwxyz*\n~abcdefghijklmnopqrstuvwxyz~\n# abcdefghijklmnopqrstuvwxyz"
@@ -48,18 +48,13 @@ struct NotesView: View {
             print("Unable to write to file")
         }
     }
-
+    
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
     }
     
-}
+ 
+    
 
-
-
-
-
-#Preview {
-    NotesView()
 }
