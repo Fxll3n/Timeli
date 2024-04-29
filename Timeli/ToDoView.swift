@@ -31,8 +31,17 @@ struct ToDoListView: View {
                 ForEach(items) { item in
                     ToDoItemView(title: item.title, text: item.text)
                 }
+                .onDelete{ indexes in
+                    for index in indexes{
+                        deleteItem(items[index])
+                    }
+                }
             }
             
         }
+    }
+    
+    func deleteItem(_ item: ToDoModel){
+        context.delete(item)
     }
 }
