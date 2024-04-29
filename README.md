@@ -46,12 +46,6 @@ Timeli's features are COMPLETELY CUSTOMIZABLE. Meaning that you can chose, edit,
 4. **Settings Menu** - In the settings menu, you are given full freedom on what features you want, and how they look.
 ---
 
-##  License
-
-This project is protected under the [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/) License. For more details, refer to the [LICENSE](https://github.com/Fxll3n/Timeli/blob/main/LICENSE) file.
-
----
-
 ##  Acknowledgments
 
 - Angel Y. Bitsov - Lead Developer
