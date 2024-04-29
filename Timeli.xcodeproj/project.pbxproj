@@ -246,9 +246,8 @@
 				140D39D92BD93FF00036DBAE /* TimeliApp.swift in Sources */,
 				14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */,
 				140D39F22BD941960036DBAE /* ToDoView.swift in Sources */,
-
+				84D3691D2BE02C6F0047B689 /* ContentModel.swift in Sources */,
 				14175BE72BE0289800F775A7 /* RemindersModel.swift in Sources */,
-
 				140D39EC2BD940D20036DBAE /* SetUpTImeli.swift in Sources */,
 				140D39EA2BD940A00036DBAE /* NotesView.swift in Sources */,
 				140D39F92BD94C100036DBAE /* SettingsView.swift in Sources */,
