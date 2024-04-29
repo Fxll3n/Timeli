@@ -7,6 +7,8 @@
 
 import SwiftUI
 import UserNotifications
+import SwiftData
+
 struct ContentView: View {
     @AppStorage("currentView") private var currentView = 0
     var body: some View{
@@ -18,12 +20,12 @@ struct ContentView: View {
                 RemindersView()
             }else if currentView == 2{
                 ToDoListView()
-                    .modelContainer(for: ToDoModel.self)
             }else if currentView == 3{
                 SettingsView()
+                    
             }
 
-            VStack{
+            VStack{ 
                 HStack{
                     TabViewer()
                     Spacer()

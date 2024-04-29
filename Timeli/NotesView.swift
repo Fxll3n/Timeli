@@ -16,6 +16,10 @@ struct NotesView: View {
     @State private var mdContent = "abcdefghijklmnopqrstuvwxyz\n**abcdefghijklmnopqrstuvwxyz**\n*abcdefghijklmnopqrstuvwxyz*\n~abcdefghijklmnopqrstuvwxyz~\n# abcdefghijklmnopqrstuvwxyz"
     var body: some View {
         VStack{
+            Text("Notes")
+                .bold()
+                .underline()
+                .font(.title)
             HStack{
                 Spacer()
                 Button(action: {
