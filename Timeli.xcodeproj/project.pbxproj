@@ -26,6 +26,7 @@
 		14175BEB2BE02F9E00F775A7 /* ReminderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14175BEA2BE02F9E00F775A7 /* ReminderItemView.swift */; };
 		14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95032BDB02450091CFAF /* NewToDoItemView.swift */; };
 		14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95052BDB02520091CFAF /* ToDoItemView.swift */; };
+		8436B1E72BE2C73C001ADFC9 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436B1E62BE2C73C001ADFC9 /* ContentModel.swift */; };
 		845150EC2BDAE61200D9DDA2 /* autoSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845150EB2BDAE61200D9DDA2 /* autoSave.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		14175BEA2BE02F9E00F775A7 /* ReminderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderItemView.swift; sourceTree = "<group>"; };
 		14DF95032BDB02450091CFAF /* NewToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoItemView.swift; sourceTree = "<group>"; };
 		14DF95052BDB02520091CFAF /* ToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemView.swift; sourceTree = "<group>"; };
+		8436B1E62BE2C73C001ADFC9 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		845150EB2BDAE61200D9DDA2 /* autoSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autoSave.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				140D39E92BD940A00036DBAE /* NotesView.swift */,
+				8436B1E62BE2C73C001ADFC9 /* ContentModel.swift */,
 				845150EB2BDAE61200D9DDA2 /* autoSave.swift */,
 			);
 			name = Notes;
@@ -257,6 +260,7 @@
 				140D39F02BD941630036DBAE /* TabViewerView.swift in Sources */,
 				14057B592BE1DC10000CBD8B /* RectModifierView.swift in Sources */,
 				140D39F72BD94BB90036DBAE /* RemindersView.swift in Sources */,
+				8436B1E72BE2C73C001ADFC9 /* ContentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
