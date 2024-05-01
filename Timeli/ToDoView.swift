@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ToDoListView: View {
     
-    @State var List = []
+    @Environment(\.modelContext) private var context
+    @Query private var items: [ToDoModel]
+    
+    @State private var isMakingNewItem = false
     
     var body: some View {
         VStack {
@@ -17,16 +21,27 @@ struct ToDoListView: View {
                 .bold()
                 .underline()
                 .font(.title)
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Text("+")
-            })
-                SwiftUI.List {
-                ForEach (0..<List.count, id: \.self){ToDoList in
+            Button("+"){
+                isMakingNewItem.toggle()
+            }
+            .sheet(isPresented: $isMakingNewItem){
+                NewToDoItemView()
+            }
+            List{
+                ForEach(items) { item in
+                    ToDoItemView(title: item.title, text: item.text)
+                }
+                .onDelete{ indexes in
+                    for index in indexes{
+                        deleteItem(items[index])
+                    }
                 }
             }
+            
         }
     }
-}
-#Preview {
-    ToDoListView(List: [])
+    
+    func deleteItem(_ item: ToDoModel){
+        context.delete(item)
+    }
 }
