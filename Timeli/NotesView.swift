@@ -10,7 +10,7 @@ import Markdown
 
 struct NotesView: View {
     @Environment(\.modelContext) private var context
-    @EnvironmentObject var contentModel: ContentModel
+//    @EnvironmentObject var contentModel: ContentModel
     @State var isEditing = false
     
     @State private var mdContent = "abcdefghijklmnopqrstuvwxyz\n**abcdefghijklmnopqrstuvwxyz**\n*abcdefghijklmnopqrstuvwxyz*\n~abcdefghijklmnopqrstuvwxyz~\n# abcdefghijklmnopqrstuvwxyz"

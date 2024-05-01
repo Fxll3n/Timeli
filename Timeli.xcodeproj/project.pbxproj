@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14057B592BE1DC10000CBD8B /* RectModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14057B582BE1DC10000CBD8B /* RectModifierView.swift */; };
 		140D39D92BD93FF00036DBAE /* TimeliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39D82BD93FF00036DBAE /* TimeliApp.swift */; };
 		140D39DB2BD93FF00036DBAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39DA2BD93FF00036DBAE /* ContentView.swift */; };
 		140D39DD2BD93FF10036DBAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140D39DC2BD93FF10036DBAE /* Assets.xcassets */; };
@@ -26,10 +27,10 @@
 		14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95032BDB02450091CFAF /* NewToDoItemView.swift */; };
 		14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95052BDB02520091CFAF /* ToDoItemView.swift */; };
 		845150EC2BDAE61200D9DDA2 /* autoSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845150EB2BDAE61200D9DDA2 /* autoSave.swift */; };
-		84D3691D2BE02C6F0047B689 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3691C2BE02C6F0047B689 /* ContentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14057B582BE1DC10000CBD8B /* RectModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectModifierView.swift; sourceTree = "<group>"; };
 		140D39D52BD93FF00036DBAE /* Timeli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		140D39D82BD93FF00036DBAE /* TimeliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeliApp.swift; sourceTree = "<group>"; };
 		140D39DA2BD93FF00036DBAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		14DF95032BDB02450091CFAF /* NewToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoItemView.swift; sourceTree = "<group>"; };
 		14DF95052BDB02520091CFAF /* ToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemView.swift; sourceTree = "<group>"; };
 		845150EB2BDAE61200D9DDA2 /* autoSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autoSave.swift; sourceTree = "<group>"; };
-		84D3691C2BE02C6F0047B689 /* ContentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentModel.swift; path = ../../../Desktop/ContentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,7 @@
 				140D39DC2BD93FF10036DBAE /* Assets.xcassets */,
 				140D39DE2BD93FF10036DBAE /* Timeli.entitlements */,
 				140D39DF2BD93FF10036DBAE /* Preview Content */,
+				14057B582BE1DC10000CBD8B /* RectModifierView.swift */,
 			);
 			path = Timeli;
 			sourceTree = "<group>";
@@ -120,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				140D39E92BD940A00036DBAE /* NotesView.swift */,
-				84D3691C2BE02C6F0047B689 /* ContentModel.swift */,
 				845150EB2BDAE61200D9DDA2 /* autoSave.swift */,
 			);
 			name = Notes;
@@ -246,7 +246,6 @@
 				140D39D92BD93FF00036DBAE /* TimeliApp.swift in Sources */,
 				14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */,
 				140D39F22BD941960036DBAE /* ToDoView.swift in Sources */,
-				84D3691D2BE02C6F0047B689 /* ContentModel.swift in Sources */,
 				14175BE72BE0289800F775A7 /* RemindersModel.swift in Sources */,
 				140D39EC2BD940D20036DBAE /* SetUpTImeli.swift in Sources */,
 				140D39EA2BD940A00036DBAE /* NotesView.swift in Sources */,
@@ -256,6 +255,7 @@
 				140D39E82BD9406E0036DBAE /* NotesModel.swift in Sources */,
 				14175BE92BE02AEE00F775A7 /* NewReminderView.swift in Sources */,
 				140D39F02BD941630036DBAE /* TabViewerView.swift in Sources */,
+				14057B592BE1DC10000CBD8B /* RectModifierView.swift in Sources */,
 				140D39F72BD94BB90036DBAE /* RemindersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
