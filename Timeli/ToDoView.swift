@@ -24,6 +24,7 @@ struct ToDoListView: View {
             Button("+"){
                 isMakingNewItem.toggle()
             }
+            .frame(width: 100, height: 100, alignment: .leading)
             .sheet(isPresented: $isMakingNewItem){
                 NewToDoItemView()
             }
