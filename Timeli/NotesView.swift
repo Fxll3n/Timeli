@@ -10,7 +10,7 @@ import Markdown
 
 struct NotesView: View {
     @Environment(\.modelContext) private var context
-//    @EnvironmentObject var contentModel: ContentModel
+    @EnvironmentObject var contentModel: ContentModel
     @State var isEditing = false
     
     @State private var mdContent = "abcdefghijklmnopqrstuvwxyz\n**abcdefghijklmnopqrstuvwxyz**\n*abcdefghijklmnopqrstuvwxyz*\n~abcdefghijklmnopqrstuvwxyz~\n# abcdefghijklmnopqrstuvwxyz"
@@ -28,6 +28,13 @@ struct NotesView: View {
                     Text(isEditing ? "Done" : "Edit")
                 })
                 .padding(10)
+                Button {
+                    createFile()
+                } label: {
+                    Text("Save")
+                }
+                .padding(10)
+                
             }
             
             if isEditing{
@@ -57,4 +64,8 @@ struct NotesView: View {
  
     
 
+}
+
+#Preview {
+    NotesView()
 }
