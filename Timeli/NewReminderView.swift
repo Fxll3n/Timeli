@@ -20,7 +20,7 @@ struct NewReminderView: View {
     @State private var timeBeforeNotif = 10
     var body: some View {
         TextField("Enter Title", text: $inputTitle)
-        TextField("Enter Title", text: $inputDescrip)
+        TextField("Desciption", text: $inputDescrip)
         DatePicker("Chooose Due Date:", selection: $inputDueDate)
         Stepper("Time before notification", value: $timeBeforeNotif)
         Button("Submit"){
@@ -53,6 +53,4 @@ struct NewReminderView: View {
     }
 }
 
-#Preview {
-    NewReminderView()
-}
+

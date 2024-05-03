@@ -48,6 +48,7 @@ struct ContentView: View {
             currentView = 0
         }
     }
+    
 }
 
 #Preview {
