@@ -15,19 +15,27 @@ struct ReminderItemView: View {
     
     
     var body: some View {
-        HStack{
-            VStack(alignment: .leading){
-                Text(title)
-                    .font(.largeTitle)
-                Text(descrip)
-            }
-            Spacer()
-            
-            VStack(alignment: .leading){
-                Text("Due: \(formatDate(dueDate))")
+        NavigationStack{
+            HStack{
+                VStack(alignment: .leading){
+                    Text(title)
+                        .font(.largeTitle)
+                    Text(descrip)
+                }
+                Spacer()
                 
-                Text("Made on: \(formatDate(dateMade))")
-            }.bold()
+                VStack(alignment: .leading){
+                    Text("Due: \(formatDate(dueDate))")
+                    
+                    Text("Made on: \(formatDate(dateMade))")
+                }.bold()
+                NavigationLink {
+                    ReminderViewExpandedView(title: title, descrip: descrip, dueDate: dueDate, dateMade: dateMade)
+                } label: {
+                    Image(systemName: "arrow.right")
+                }
+
+            }
         }
     }
     
