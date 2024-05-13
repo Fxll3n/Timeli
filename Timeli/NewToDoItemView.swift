@@ -13,16 +13,39 @@ struct NewToDoItemView: View {
     
     @Environment(\.modelContext) private var context
     
-    @State private var titleInput = ""
-    @State private var textInput = ""
+    @State private var inputTitle = ""
+    @State private var inputDescrip = ""
+    @State private var showAlert = false
+    @State private var alertReason = ""
     
     var body: some View {
-        TextField("Enter Title", text: $titleInput)
-        TextField("Enter Text", text: $textInput)
-        Button("Submit"){
-            addItem(title: titleInput, text: textInput)
-            dismiss()
+        VStack{
+            Group{
+                TextField("Enter Title", text: $inputTitle)
+                TextField("Enter Description", text: $inputDescrip)
+            }
+            .textFieldStyle(.roundedBorder)
+            
+            Button("Submit"){
+                if inputTitle != "" && inputDescrip != ""{
+                    addItem(title: inputTitle, text: inputDescrip)
+                }else if inputTitle == "" && inputDescrip != ""{
+                    showAlert = true
+                    alertReason = "Please enter a title."
+                }else if inputTitle != "" && inputDescrip == ""{
+                    showAlert = true
+                    alertReason = "Please enter a description."
+                }else{
+                    showAlert = true
+                    alertReason = "Please enter both a title and description."
+                }
+                
+            }
+            .alert("\(alertReason)", isPresented: $showAlert) {
+                Button("OK", role: .cancel) { }
+            }
         }
+        .padding()
     }
     
     func addItem(title: String, text: String){

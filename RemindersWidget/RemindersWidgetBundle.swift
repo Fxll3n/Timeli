@@ -7,11 +7,14 @@
 
 import WidgetKit
 import SwiftUI
+import SwiftData
 
 @main
 struct RemindersWidgetBundle: WidgetBundle {
     var body: some Widget {
         RemindersWidget()
         RemindersWidgetLiveActivity()
+        
     }
+        
 }

@@ -7,24 +7,25 @@
 
 import WidgetKit
 import SwiftUI
+import SwiftData
 
 struct Provider: AppIntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent())
+    func placeholder(in context: Context) -> RemindEntry {
+        RemindEntry(date: Date(), configuration: ConfigurationAppIntent())
     }
 
-    func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: configuration)
+    func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> RemindEntry {
+        RemindEntry(date: Date(), configuration: configuration)
     }
     
-    func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
-        var entries: [SimpleEntry] = []
+    func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<RemindEntry> {
+        var entries: [RemindEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+            let entry = RemindEntry(date: entryDate, configuration: configuration)
             entries.append(entry)
         }
 
@@ -32,7 +33,7 @@ struct Provider: AppIntentTimelineProvider {
     }
 }
 
-struct SimpleEntry: TimelineEntry {
+struct RemindEntry: TimelineEntry {
     let date: Date
     let configuration: ConfigurationAppIntent
 }
@@ -49,6 +50,7 @@ struct RemindersWidgetEntryView : View {
             Text(entry.configuration.favoriteEmoji)
         }
     }
+        
 }
 
 struct RemindersWidget: Widget {
@@ -79,6 +81,6 @@ extension ConfigurationAppIntent {
 #Preview(as: .systemSmall) {
     RemindersWidget()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+    RemindEntry(date: .now, configuration: .smiley)
+    RemindEntry(date: .now, configuration: .starEyes)
 }

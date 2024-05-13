@@ -25,7 +25,7 @@ struct RemindersView: View {
             Button("+"){
                 isMakingNew.toggle()
             }
-            .sheet(isPresented: $isMakingNew){
+            .popover(isPresented: $isMakingNew){
                 NewReminderView()
             }
             

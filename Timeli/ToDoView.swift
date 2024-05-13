@@ -24,7 +24,7 @@ struct ToDoListView: View {
             Button("+"){
                 isMakingNewItem.toggle()
             }
-            .sheet(isPresented: $isMakingNewItem){
+            .popover(isPresented: $isMakingNewItem){
                 NewToDoItemView()
             }
             List{

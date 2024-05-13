@@ -18,16 +18,39 @@ struct NewReminderView: View {
     @State private var inputDescrip = ""
     @State private var inputDueDate = Date()
     @State private var timeBeforeNotif = 10
+    @State private var showAlert = false
+    @State private var alertReason = ""
+    
     var body: some View {
-        TextField("Enter Title", text: $inputTitle)
-        TextField("Enter Title", text: $inputDescrip)
-        DatePicker("Chooose Due Date:", selection: $inputDueDate)
-        Stepper("Time before notification", value: $timeBeforeNotif)
-        Button("Submit"){
-            addItem(title: inputTitle, descrip: inputDescrip, due: inputDueDate)
-            dismiss()
-            scheduleNotification(title: inputTitle, context: "Due now!", date: inputDueDate)
+        VStack{
+            Group {
+                TextField("Reminder Title", text: $inputTitle)
+                TextField("Reminder Description", text: $inputDescrip)
+            }.textFieldStyle(.roundedBorder)
+            DatePicker("Due Date:", selection: $inputDueDate)
+            Button("Submit"){
+                if inputTitle != "" && inputDescrip != ""{
+                    addItem(title: inputTitle, descrip: inputDescrip, due: inputDueDate)
+                    dismiss()
+                    scheduleNotification(title: inputTitle, context: "Due now!", date: inputDueDate)
+                }else if inputTitle == "" && inputDescrip != ""{
+                    showAlert = true
+                    alertReason = "Please enter a title."
+                }else if inputTitle != "" && inputDescrip == ""{
+                    showAlert = true
+                    alertReason = "Please enter a description."
+                }else{
+                    showAlert = true
+                    alertReason = "Please enter both a title and description."
+                }
+                
+            }
+            .alert("\(alertReason)", isPresented: $showAlert) {
+                Button("OK", role: .cancel) { }
+            }
         }
+        .padding()
+        
     }
     
     
