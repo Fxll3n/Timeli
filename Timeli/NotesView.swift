@@ -27,14 +27,12 @@ struct NotesView: View {
                 }, label: {
                     Text(isEditing ? "Done" : "Edit")
                 })
-                .padding(10)
+                .padding()
                 Button {
                     createFile()
                 } label: {
                     Text("Save")
                 }
-                .padding(10)
-                
             }
             
             if isEditing{

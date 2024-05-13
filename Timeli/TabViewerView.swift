@@ -76,7 +76,7 @@ struct TabViewer: View {
             }
             
         }
-        .padding(10)
+        
         
     }
 }

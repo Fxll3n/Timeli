@@ -68,10 +68,10 @@ struct ReminderViewExpandedView: View {
                                 .bold()
                             Text(descrip)
                         }
-                    }.padding(5)
+                    }
                 }
                 
-
+                
                 ZStack(alignment: .leading){
                     RoundedRectangle(cornerRadius: 10)
                         .modifier(RectModifier())
@@ -86,17 +86,16 @@ struct ReminderViewExpandedView: View {
                                 .font(.title3)
                                 .bold()
                             Text("\(formatDate(dateMade))")
-
-                        }.padding(5)
-                    }
+                            
+                        }                    }
                 }
                 
-
+                
             }
             
             
             
-        }.padding()
+        }
         Divider()
             .frame(height: 3)
             .overlay(Color.black)
@@ -118,10 +117,10 @@ struct ReminderViewExpandedView: View {
                         Text("\(formatDate(dateMade))")
                     }
                     Spacer()
-
-                }.padding(5)
+                    
+                }
             }
-        }.padding(10).offset(y:-50)
+        }.padding().offset(y:-50)
         Spacer()
         
     }
