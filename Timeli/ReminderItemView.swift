@@ -15,27 +15,22 @@ struct ReminderItemView: View {
     
     
     var body: some View {
-        NavigationStack{
-            HStack{
-                VStack(alignment: .leading){
-                    Text(title)
-                        .font(.largeTitle)
-                    Text(descrip)
-                }
-                Spacer()
-                
-                VStack(alignment: .leading){
-                    Text("Due: \(formatDate(dueDate))")
-                    
-                    Text("Made on: \(formatDate(dateMade))")
-                }.bold()
-                NavigationLink {
-                    ReminderViewExpandedView(title: title, descrip: descrip, dueDate: dueDate, dateMade: dateMade)
-                } label: {
-                    Image(systemName: "arrow.right")
-                }
-
+        
+        HStack{
+            VStack(alignment: .leading){
+                Text(title)
+                    .font(.largeTitle)
+                Text(descrip)
             }
+            Spacer()
+            
+            VStack(alignment: .leading){
+                Text("Due: \(formatDate(dueDate))")
+                
+                Text("Made on: \(formatDate(dateMade))")
+            }.bold()
+            
+            
         }
     }
     
@@ -79,7 +74,7 @@ struct ReminderViewExpandedView: View {
                     }.padding(5)
                 }
                 
-
+                
                 ZStack(alignment: .leading){
                     RoundedRectangle(cornerRadius: 25)
                         .modifier(RectModifier())
@@ -94,12 +89,12 @@ struct ReminderViewExpandedView: View {
                                 .font(.title3)
                                 .bold()
                             Text("\(formatDate(dateMade))")
-
+                            
                         }.padding(5)
                     }
                 }
                 
-
+                
             }
             
             
@@ -126,7 +121,7 @@ struct ReminderViewExpandedView: View {
                         Text("\(formatDate(dateMade))")
                     }
                     Spacer()
-
+                    
                 }.padding(5)
             }
         }.padding(10).offset(y:-50)

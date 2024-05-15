@@ -10,11 +10,10 @@ import UserNotifications
 
 struct SetupTimeliStart: View {
     var body: some View {
-        NavigationStack{
-            HStack{
-                Text("Timeli")
-                    .font(.system(size: 80))
-            }
+        VStack{
+            Text("Timeli")
+                .font(.system(size: 80))
+            
             Spacer()
             NavigationLink{
                 SetUpFeatures().navigationBarBackButtonHidden(true)
@@ -63,7 +62,7 @@ struct SetUpFeatures: View {
                 NavigationLink{
                     ContentView().navigationBarBackButtonHidden(true) // Hide the "Back" button
                     
-
+                    
                 } label: {
                     RoundedRectangle(cornerRadius: 15)
                         .frame(width: 135, height: 65, alignment: .center)

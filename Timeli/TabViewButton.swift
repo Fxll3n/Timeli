@@ -12,6 +12,7 @@ struct TabViewButton: View {
     @State var isSelected: Bool?
     @State var iconName: String?
     @State var idNumber: Int?
+    @State var tapCount: Int = 0
     
     let execute: () -> Void
     
@@ -24,9 +25,12 @@ struct TabViewButton: View {
                 .resizable()
                 .frame(width: 45, height: 45, alignment: .center)
                 .foregroundStyle(.white)
+                .symbolEffect(.bounce, value: tapCount)
                 .onTapGesture {
                     execute()
                     currentView = idNumber ?? 0
+                    tapCount += 1
+                    
                 }
         }else{
             Image(systemName: "\(iconName ?? "questionmark.circle").fill")

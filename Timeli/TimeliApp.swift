@@ -12,11 +12,14 @@ import SwiftData
 struct TimeliApp: App {
     @State var isSetUp = UserDefaults.standard.bool(forKey: "isSetUp")
     var body: some Scene {
+        
         WindowGroup {
-            if isSetUp == true{
-                ContentView()
-            }else{
-                SetupTimeliStart()
+            NavigationStack{
+                if isSetUp == true{
+                    ContentView()
+                }else{
+                    SetupTimeliStart()
+                }
             }
         }
         

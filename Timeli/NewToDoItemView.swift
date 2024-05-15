@@ -29,6 +29,7 @@ struct NewToDoItemView: View {
             Button("Submit"){
                 if inputTitle != "" && inputDescrip != ""{
                     addItem(title: inputTitle, text: inputDescrip)
+                    dismiss()
                 }else if inputTitle == "" && inputDescrip != ""{
                     showAlert = true
                     alertReason = "Please enter a title."

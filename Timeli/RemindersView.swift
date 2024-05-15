@@ -22,16 +22,25 @@ struct RemindersView: View {
                 .bold()
                 .underline()
                 .font(.title)
-            Button("+"){
+            Button{
                 isMakingNew.toggle()
+            }label:{
+                Image(systemName: "plus.square")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .foregroundStyle(.black)                
             }
-            .popover(isPresented: $isMakingNew){
+            .sheet(isPresented: $isMakingNew){
                 NewReminderView()
             }
             
             List{
                 ForEach(items) { item in
-                    ReminderItemView(title: item.title, descrip: item.descrip, dueDate: item.dueDate, dateMade: item.dateMade)
+                    NavigationLink{
+                        ReminderViewExpandedView(title: item.title, descrip: item.descrip, dueDate: item.dueDate, dateMade: item.dateMade)
+                    }label:{
+                        ReminderItemView(title: item.title, descrip: item.descrip, dueDate: item.dueDate, dateMade: item.dateMade)
+                    }
                 }
                 .onDelete{ indexes in
                     for index in indexes{
@@ -50,6 +59,9 @@ struct RemindersView: View {
     
 }
 
+#Preview {
+    RemindersView()
+}
 
 
 /*

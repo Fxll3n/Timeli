@@ -30,7 +30,7 @@ struct TabViewer: View {
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: 70, height: isExpanded ? 290 : 70)
                             
-                            .foregroundColor(.gray)
+                            .foregroundColor(.black)
                         VStack(spacing: 28){
                             
                             if isExpanded{
