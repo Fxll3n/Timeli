@@ -27,7 +27,7 @@ struct TabViewer: View {
                 }) {
                     ZStack(alignment: .center) {
                         
-                        RoundedRectangle(cornerRadius: 10)
+                        RoundedRectangle(cornerRadius: 27)
                             .frame(width: 70, height: isExpanded ? 290 : 70)
                             
                             .foregroundColor(.black)
@@ -76,7 +76,7 @@ struct TabViewer: View {
             }
             
         }
-        .padding(10)
+        
         
     }
 }

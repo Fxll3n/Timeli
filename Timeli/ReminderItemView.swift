@@ -61,9 +61,9 @@ struct ReminderViewExpandedView: View {
                 .font(.title)
             HStack{
                 ZStack(alignment: .leading){
-                    RoundedRectangle(cornerRadius: 25)
+                    RoundedRectangle(cornerRadius: 10)
                         .modifier(RectModifier())
-                        .frame(width: 235, height: 135, alignment: .leading)
+                        .frame(width: 235, height: 115, alignment: .leading)
                     Group{
                         VStack(alignment: .leading){
                             Text("Description:")
@@ -71,14 +71,14 @@ struct ReminderViewExpandedView: View {
                                 .bold()
                             Text(descrip)
                         }
-                    }.padding(5)
+                    }
                 }
                 
                 
                 ZStack(alignment: .leading){
-                    RoundedRectangle(cornerRadius: 25)
+                    RoundedRectangle(cornerRadius: 10)
                         .modifier(RectModifier())
-                        .frame(width: 135, height: 135, alignment: .leading)
+                        .frame(width: 135, height: 115, alignment: .leading)
                     Group{
                         VStack(alignment: .leading){
                             Text("Due:")
@@ -90,8 +90,7 @@ struct ReminderViewExpandedView: View {
                                 .bold()
                             Text("\(formatDate(dateMade))")
                             
-                        }.padding(5)
-                    }
+                        }                    }
                 }
                 
                 
@@ -99,14 +98,14 @@ struct ReminderViewExpandedView: View {
             
             
             
-        }.padding()
+        }
         Divider()
             .frame(height: 3)
-            .overlay(Color.gray)
+            .overlay(Color.black)
             .padding()
             .offset(y: -30)
         ZStack(alignment: .leading){
-            RoundedRectangle(cornerRadius: 25)
+            RoundedRectangle(cornerRadius: 10)
                 .modifier(RectModifier())
             Group{
                 VStack(alignment: .leading){
@@ -122,9 +121,9 @@ struct ReminderViewExpandedView: View {
                     }
                     Spacer()
                     
-                }.padding(5)
+                }
             }
-        }.padding(10).offset(y:-50)
+        }.padding().offset(y:-50)
         Spacer()
         
     }

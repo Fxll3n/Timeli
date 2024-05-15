@@ -76,6 +76,4 @@ struct NewReminderView: View {
     }
 }
 
-#Preview {
-    NewReminderView()
-}
+
