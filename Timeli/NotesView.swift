@@ -29,7 +29,7 @@ struct NotesView: View {
                 })
                 .padding()
                 Button {
-                    createFile()
+                    saveMD()
                 } label: {
                     Text("Save")
                 }
@@ -40,23 +40,31 @@ struct NotesView: View {
             }else{
                 Markdown(content: $mdContent)
             }
-        }
+        } .onAppear(perform: loadMD)
     }
     
-    func createFile() {
-        let filename = getDocumentsDirectory().appendingPathComponent("example.md")
+    func loadMD() {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = documentsDirectory.appendingPathComponent("note.md")
         
         do {
-            try mdContent.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
-            print("File created successfully")
+            mdContent = try String(contentsOf: fileURL, encoding: .utf8)
+            print("Successfully loaded file!")
         } catch {
-            print("Unable to write to file")
+            print("Error loading the note \(error)")
         }
     }
-    
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
+    func saveMD() {
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let fileURL = documentsDirectory.appendingPathComponent("note.md")
+        
+        do {
+            try mdContent.write(to:fileURL, atomically: true, encoding: .utf8)
+            print("Successfully saved file!")
+        } catch {
+            print("Error saving the file \(error)")
+        }
+        
     }
     
  
