@@ -16,7 +16,7 @@ struct ContentView: View {
             
             if currentView == 0 && UserDefaults.standard.bool(forKey: "enableNotes") == true{
                 NotesView()
-            }else if currentView == 1 && UserDefaults.standard.bool(forKey: "enableReminders") == true{
+            }else if currentView == 1 && UserDefaults.standard.bool(forKey: "enableReminder") == true{
                 RemindersView()
             }else if currentView == 2 && UserDefaults.standard.bool(forKey: "enableToDo") == true{
                 ToDoListView()
