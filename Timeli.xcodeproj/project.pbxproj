@@ -34,8 +34,6 @@
 		14675A1E2BEAB11C00F08B7D /* RemindersWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 14675A0A2BEAB11B00F08B7D /* RemindersWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95032BDB02450091CFAF /* NewToDoItemView.swift */; };
 		14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95052BDB02520091CFAF /* ToDoItemView.swift */; };
-		430158D12BED527600883922 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430158D02BED527600883922 /* File.swift */; };
-		430158D32BED5DED00883922 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430158D22BED5DED00883922 /* OnboardView.swift */; };
 		8436B1E72BE2C73C001ADFC9 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436B1E62BE2C73C001ADFC9 /* ContentModel.swift */; };
 		845150EC2BDAE61200D9DDA2 /* autoSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845150EB2BDAE61200D9DDA2 /* autoSave.swift */; };
 /* End PBXBuildFile section */
@@ -94,8 +92,6 @@
 		14675A1B2BEAB11C00F08B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14DF95032BDB02450091CFAF /* NewToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoItemView.swift; sourceTree = "<group>"; };
 		14DF95052BDB02520091CFAF /* ToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemView.swift; sourceTree = "<group>"; };
-		430158D02BED527600883922 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		430158D22BED5DED00883922 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		8436B1E62BE2C73C001ADFC9 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		845150EB2BDAE61200D9DDA2 /* autoSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autoSave.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,7 +216,6 @@
 			children = (
 				140D39EF2BD941630036DBAE /* TabViewerView.swift */,
 				140D39ED2BD9412E0036DBAE /* TabViewButton.swift */,
-				430158CF2BED525700883922 /* Onboard */,
 			);
 			name = TabViewer;
 			sourceTree = "<group>";
@@ -370,9 +365,7 @@
 				14175BE92BE02AEE00F775A7 /* NewReminderView.swift in Sources */,
 				140D39F02BD941630036DBAE /* TabViewerView.swift in Sources */,
 				14057B592BE1DC10000CBD8B /* RectModifierView.swift in Sources */,
-				430158D32BED5DED00883922 /* OnboardView.swift in Sources */,
 				140D39F72BD94BB90036DBAE /* RemindersView.swift in Sources */,
-				430158D12BED527600883922 /* File.swift in Sources */,
 				8436B1E72BE2C73C001ADFC9 /* ContentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
