@@ -14,16 +14,18 @@ struct ContentView: View {
     var body: some View{
         ZStack{
             
-            if currentView == 0 && UserDefaults.standard.bool(forKey: "enableNotes") == true{
-                NotesView()
-            }else if currentView == 1 && UserDefaults.standard.bool(forKey: "enableReminder") == true{
-                RemindersView()
-            }else if currentView == 2 && UserDefaults.standard.bool(forKey: "enableToDo") == true{
-                ToDoListView()
-            }else if currentView == 3{
-                SettingsView()
-                    
-            }
+            VStack{
+                if currentView == 0 && UserDefaults.standard.bool(forKey: "enableNotes") == true{
+                    NotesView()
+                }else if currentView == 1 && UserDefaults.standard.bool(forKey: "enableReminder") == true{
+                    RemindersView()
+                }else if currentView == 2 && UserDefaults.standard.bool(forKey: "enableToDo") == true{
+                    ToDoListView()
+                }else if currentView == 3{
+                    SettingsView()
+                        
+                }
+            }.frame(height: 740)
 
             VStack{ 
                 HStack{
@@ -34,10 +36,10 @@ struct ContentView: View {
                     
                 }
                 Spacer()
-                Spacer()
             }
             
         }
+        
         .onAppear(){
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
                 if granted {
