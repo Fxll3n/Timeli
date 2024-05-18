@@ -22,7 +22,12 @@ struct NewToDoItemView: View {
         VStack{
             Group{
                 TextField("Enter Title", text: $inputTitle)
+                    .textFieldStyle(.roundedBorder)
+                    .multilineTextAlignment(.leading)
                 TextField("Enter Description", text: $inputDescrip)
+                    .textFieldStyle(.roundedBorder)
+                    .multilineTextAlignment(.leading)
+                    
             }
             .textFieldStyle(.roundedBorder)
             

@@ -99,7 +99,7 @@ struct ReminderViewExpandedView: View {
             
             
         }
-        Divider()
+        Spacer()
             .frame(height: 3)
             .overlay(Color.black)
             .padding()
@@ -110,14 +110,14 @@ struct ReminderViewExpandedView: View {
             Group{
                 VStack(alignment: .leading){
                     Group{
-                        Text("Due:")
+                        Text(" Due:")
                             .font(.title3)
                             .bold()
-                        Text("\(formatDate(dueDate))")
-                        Text("Made on:")
+                        Text(" \(formatDate(dueDate))")
+                        Text(" Made on:")
                             .font(.title3)
                             .bold()
-                        Text("\(formatDate(dateMade))")
+                        Text(" \(formatDate(dateMade))")
                     }
                     Spacer()
                     

@@ -18,22 +18,34 @@ struct NotesView: View {
         VStack{
             Text("Notes")
                 .bold()
-                .underline()
                 .font(.title)
             HStack{
                 Spacer()
                 Button(action: {
                     isEditing.toggle()
                 }, label: {
-                    Text(isEditing ? "Done" : "Edit")
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 5.0)
+                            .frame(width: 40, height: 30)
+                            .foregroundStyle(Color.blue)
+                        Text(isEditing ? "Done" : "Edit")
+                            .foregroundStyle(Color.white)
+                    }
+                        
                 })
-                .padding()
                 Button {
                     saveMD()
                 } label: {
-                    Text("Save")
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 5.0)
+                            .frame(width: 40, height: 30)
+                            .foregroundStyle(Color.blue)
+                        Text("Save")
+                            .foregroundStyle(Color.white)
+                    }
+                
                 }
-            }
+            }.padding(.trailing)
             
             if isEditing{
                 TextEditor(text: $mdContent)

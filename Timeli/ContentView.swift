@@ -13,7 +13,12 @@ struct ContentView: View {
     @AppStorage("currentView") private var currentView = 0
     var body: some View{
         ZStack{
-            
+// Maybe for a Hersey pilot program or for jamf self service at JHHS?
+//            LinearGradient(
+//                          colors: [.red, .orange],
+//                          startPoint: .topLeading,
+//                          endPoint: .bottomTrailing
+//            ).ignoresSafeArea()
             VStack{
                 if currentView == 0 && UserDefaults.standard.bool(forKey: "enableNotes") == true{
                     NotesView()
@@ -27,7 +32,7 @@ struct ContentView: View {
                 }
             }.frame(height: 740)
 
-            VStack{ 
+            VStack{
                 HStack{
                     TabViewer()
                         .padding()

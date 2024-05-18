@@ -19,19 +19,7 @@ struct ToDoListView: View {
         VStack {
             Text("To Do List")
                 .bold()
-                .underline()
                 .font(.title)
-            Button{
-                isMakingNewItem.toggle()
-            }label:{
-                Image(systemName: "plus.square")
-                    .resizable()
-                    .frame(width: 40, height: 40)
-                    .foregroundStyle(.black)
-            }
-            .frame(width: 100, height: 100)
-            .sheet(isPresented: $isMakingNewItem){
-                NewToDoItemView()
             }
             List{
                 ForEach(items) { item in
@@ -42,7 +30,27 @@ struct ToDoListView: View {
                         deleteItem(items[index])
                     }
                 }
-            }
+            }.ignoresSafeArea()
+            
+                .safeAreaInset(edge: .bottom, alignment: .trailing, spacing: 10) {
+                    Button{
+                        isMakingNewItem.toggle()
+                    }label:{
+                        ZStack{
+                            Image(systemName: "plus")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundStyle(Color.green)
+                                .padding(.trailing)
+                                .frame(width: 100, height: 100)
+                                .sheet(isPresented: $isMakingNewItem){
+                                    NewToDoItemView()
+                            
+                        }
+         
+                        
+                    }
+                }
             
         }
     }

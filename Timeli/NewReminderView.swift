@@ -27,6 +27,7 @@ struct NewReminderView: View {
                 TextField("Reminder Title", text: $inputTitle)
                 TextField("Reminder Description", text: $inputDescrip)
             }.textFieldStyle(.roundedBorder)
+             .multilineTextAlignment(.leading)
             DatePicker("Due Date:", selection: $inputDueDate)
             Button("Submit"){
                 if inputTitle != "" && inputDescrip != ""{
