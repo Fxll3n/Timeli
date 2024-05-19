@@ -37,10 +37,14 @@ struct ToDoListView: View {
                         isMakingNewItem.toggle()
                     }label:{
                         ZStack{
+                            Circle()
+                                .padding(.trailing)
+                                .foregroundStyle(Color.black)
+                                .frame(width: 70, height: 70)
                             Image(systemName: "plus")
                                 .resizable()
                                 .frame(width: 40, height: 40)
-                                .foregroundStyle(Color.green)
+                                .foregroundStyle(Color.white)
                                 .padding(.trailing)
                                 .frame(width: 100, height: 100)
                                 .sheet(isPresented: $isMakingNewItem){
