@@ -8,18 +8,27 @@
 import SwiftUI
 import Markdown
 
+
 struct NotesView: View {
     @Environment(\.modelContext) private var context
-    @EnvironmentObject var contentModel: ContentModel
     @State var isEditing = false
-    
+    @State var showSavePopup = false
+    @State var fileName = ""
+    @State var showFileList = false
+    @State var files: [URL] = []
+    @FocusState private var fileNameIsFocused: Bool
     @State private var mdContent = "abcdefghijklmnopqrstuvwxyz\n**abcdefghijklmnopqrstuvwxyz**\n*abcdefghijklmnopqrstuvwxyz*\n~abcdefghijklmnopqrstuvwxyz~\n# abcdefghijklmnopqrstuvwxyz"
+    
     var body: some View {
         VStack{
             Text("Notes")
                 .bold()
                 .font(.title)
             HStack{
+                Spacer()
+                TextField("File Name", text: $fileName)
+                    .focused($fileNameIsFocused)
+                    .submitLabel(.join)
                 Spacer()
                 Button(action: {
                     isEditing.toggle()
@@ -34,13 +43,25 @@ struct NotesView: View {
                         
                 })
                 Button {
-                    saveMD()
+                    showSavePopup = true
                 } label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 5.0)
                             .frame(width: 40, height: 30)
                             .foregroundStyle(Color.blue)
                         Text("Save")
+                            .foregroundStyle(Color.white)
+                    }
+                
+                }
+                Button {
+                    showFileList = true
+                } label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 5.0)
+                            .frame(width: 40, height: 30)
+                            .foregroundStyle(Color.blue)
+                        Text("Load")
                             .foregroundStyle(Color.white)
                     }
                 
@@ -53,6 +74,14 @@ struct NotesView: View {
                 Markdown(content: $mdContent)
             }
         } .onAppear(perform: loadMD)
+        .alert(isPresented: $showSavePopup) {
+            Alert(title: Text("Save File"), message: Text("Enter a name for the file"), primaryButton: .default(Text("Save")) {
+                saveMD()
+            }, secondaryButton: .cancel())
+        }
+        .sheet(isPresented: $showFileList) {
+            NoteFileList(mdContent: $mdContent)
+        }
     }
     
     func loadMD() {
