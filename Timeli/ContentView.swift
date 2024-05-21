@@ -10,41 +10,24 @@ import UserNotifications
 import SwiftData
 
 struct ContentView: View {
-    @AppStorage("currentView") private var currentView = 0
+    
+    @State var enabledViews: [MyView] = [
+        MyView(id: 1, view: AnyView(NotesView())),
+        MyView(id: 2, view: AnyView(RemindersView())),
+        MyView(id: 3, view: AnyView(ToDoListView())),
+        MyView(id: 1, view: AnyView(SettingsView()))
+        
+    ]
     var body: some View{
-        ZStack{
-// Maybe for a Hersey pilot program or for jamf self service at JHHS?
-//            LinearGradient(
-//                          colors: [.red, .orange],
-//                          startPoint: .topLeading,
-//                          endPoint: .bottomTrailing
-//            ).ignoresSafeArea()
-            VStack{
-                if currentView == 0 && UserDefaults.standard.bool(forKey: "enableNotes") == true{
-                    NotesView()
-                }else if currentView == 1 && UserDefaults.standard.bool(forKey: "enableReminder") == true{
-                    RemindersView()
-                }else if currentView == 2 && UserDefaults.standard.bool(forKey: "enableToDo") == true{
-                    ToDoListView()
-                }else if currentView == 3{
-                    SettingsView()
-                        
-                }
-            }.frame(height: 740)
-
+        NavigationStack{
             VStack{
                 HStack{
-                    TabViewer()
-                        .padding()
+                    TabViewer(views: enabledViews)
                     Spacer()
-                    
-                    
                 }
                 Spacer()
             }
-            
         }
-        
         .onAppear(){
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
                 if granted {
@@ -53,7 +36,7 @@ struct ContentView: View {
                     print("Notification authorization denied")
                 }
             }
-            currentView = 0
+            
         }
     }
     

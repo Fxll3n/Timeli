@@ -7,80 +7,48 @@
 
 import SwiftUI
 
+
 struct TabViewer: View {
-    @Environment(\.modelContext) private var context
     @State private var isExpanded = false
-    
-    @State private var isNoteSelect: Bool = true
-    @State private var isReminderSelect: Bool = false
-    @State private var isToDoSelect: Bool = false
-    @State private var isSettingSelect: Bool = false
+    @State var views: [MyView]?
     
     
     var body: some View {
-        VStack{
-            HStack{
-                Button(action: {
-                  withAnimation(.easeInOut(duration: 0.3)) {
-                    isExpanded.toggle()
-                  }
-                }) {
-                    ZStack(alignment: .center) {
-                        
-                        RoundedRectangle(cornerRadius: 32)
-                            .frame(width: 70, height: isExpanded ? 290 : 70)
-                            
-                            .foregroundColor(.black)
-                        VStack(spacing: 28){
-                            
-                            if isExpanded{
-                                TabViewButton(isExpanded: $isExpanded, isSelected: isNoteSelect, iconName: "doc", idNumber: 0){
-                                    isReminderSelect = false
-                                    isToDoSelect = false
-                                    isSettingSelect = false
-                                    isNoteSelect = true
-                                    isExpanded = false
+        VStack { // Vertical stack
+            RoundedRectangle(cornerRadius: isExpanded ? 20 : 30)
+                .frame(width: 60, height: isExpanded ? CGFloat((views ?? []).count) * 40 + 80 : 60) // Adjust height
+                .animation(.easeInOut) // Smooth animation
+                .overlay(
+                    VStack {
+                        Spacer() // Top spacer
+                        if isExpanded { // If expanded
+                            ForEach((views ?? []), id: \.id) { myView in // Loop through views
+                                NavigationLink(destination: myView.view) {
+                                    Image(systemName: "photo")
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
                                 }
-                                TabViewButton(isExpanded: $isExpanded, isSelected: isReminderSelect, iconName: "clock", idNumber: 1){
-                                    isNoteSelect = false
-                                    isToDoSelect = false
-                                    isSettingSelect = false
-                                    isReminderSelect = true
-                                    isExpanded = false
-                                }
-                                TabViewButton(isExpanded: $isExpanded, isSelected: isToDoSelect, iconName: "list.bullet.clipboard", idNumber: 2){
-                                    isReminderSelect = false
-                                    isNoteSelect = false
-                                    isSettingSelect = false
-                                    isToDoSelect = true
-                                    isExpanded = false
-                                }
-                                TabViewButton(isExpanded: $isExpanded, isSelected: isSettingSelect, iconName: "ellipsis.circle", idNumber: 3){
-                                    isReminderSelect = false
-                                    isToDoSelect = false
-                                    isNoteSelect = false
-                                    isSettingSelect = true
-                                    isExpanded = false
-                                }
-                            }else{
-                                Image(systemName: "ellipsis.circle")
-                                    .resizable()
-                                    .frame(width: 45, height: 45, alignment: .center)
-                                    .foregroundStyle(.white)
                             }
                         }
+                        Spacer()
+                        Button(action: {
+                            withAnimation {
+                                isExpanded.toggle() // Toggle expansion state
+                            }
+                        }) {
+                            Image(systemName: "ellipsis.circle")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                        }
+                        .offset(y: isExpanded ? 0 : -3) // Adjust button position
+                        Spacer()
                     }
-                  
-                }
-                
-            }
-            
+                )
         }
-        
-        
     }
 }
 
-#Preview {
-    TabViewer()
+struct MyView: Identifiable {
+    let id: Int // Identifier
+    let view: AnyView // View content
 }
