@@ -15,7 +15,7 @@ struct ContentView: View {
         MyView(id: 1, view: AnyView(NotesView())),
         MyView(id: 2, view: AnyView(RemindersView())),
         MyView(id: 3, view: AnyView(ToDoListView())),
-        MyView(id: 1, view: AnyView(SettingsView()))
+        MyView(id: 4, view: AnyView(SettingsView()))
         
     ]
     var body: some View{
