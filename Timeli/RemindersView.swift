@@ -7,9 +7,11 @@
 
 import SwiftUI
 import SwiftData
+import TipKit
 
 struct RemindersView: View {
     
+    var makeReminderTip = makeNewReminderItem()
     
     @Environment(\.modelContext) private var context
     @Query private var items: [RemindModel]
@@ -22,6 +24,8 @@ struct RemindersView: View {
                 .bold()
                 .font(.title)
         }
+        
+        
         .sheet(isPresented: $isMakingNew){
             NewReminderView()
         }
@@ -42,30 +46,42 @@ struct RemindersView: View {
         }.ignoresSafeArea()
         
             .safeAreaInset(edge: .bottom, alignment: .trailing, spacing: 0) {
-                Button{
-                    isMakingNew.toggle()
-                }label:{
-                    ZStack{
-                        Circle()
-                            .padding(.trailing)
-                            .foregroundStyle(Color.black)
-                            .frame(width: 70, height: 70)
-                        Image(systemName: "plus")
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                            .foregroundStyle(Color.white)
-                            .padding(.trailing)
-                            .frame(width: 100, height: 100)
-                            .sheet(isPresented: $isMakingNew){
-                                NewToDoItemView()
-                                
-                            }
-                        
-                        
+                HStack(){
+                    TipView(makeReminderTip, arrowEdge: .trailing)
+                        .shadow(radius: 10)
+                    Button{
+                        isMakingNew.toggle()
+                    }label:{
+                        ZStack{
+                            Circle()
+                                .foregroundStyle(Color.black)
+                                .frame(width: 70, height: 70)
+                            Image(systemName: "plus")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundStyle(Color.white)
+                                .frame(width: 100, height: 100)
+                                .sheet(isPresented: $isMakingNew){
+                                    NewToDoItemView()
+                                    
+                                }
+                            
+                            
+                            
+                        }
                     }
-                }
+                }.padding()
+                
+            }
+            .task {
+                // Configure and load your tips at app launch.
+                try? Tips.configure([
+                    .displayFrequency(.immediate),
+                    .datastoreLocation(.applicationDefault)
+                ])
             }
     }
+    
     func deleteItem(_ item: RemindModel){
         context.delete(item)
     }

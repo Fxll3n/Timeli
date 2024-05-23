@@ -31,6 +31,7 @@
 		14675A182BEAB11B00F08B7D /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14675A172BEAB11B00F08B7D /* AppIntent.swift */; };
 		14675A1A2BEAB11C00F08B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14675A192BEAB11C00F08B7D /* Assets.xcassets */; };
 		14675A1E2BEAB11C00F08B7D /* RemindersWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 14675A0A2BEAB11B00F08B7D /* RemindersWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		14C9BA952BFFD03100ECEBA9 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C9BA942BFFD03100ECEBA9 /* Tips.swift */; };
 		14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95032BDB02450091CFAF /* NewToDoItemView.swift */; };
 		14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95052BDB02520091CFAF /* ToDoItemView.swift */; };
 		6E38E9DA2BF97AD50032A78E /* NoteFileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38E9D92BF97AD50032A78E /* NoteFileListView.swift */; };
@@ -87,6 +88,7 @@
 		14675A172BEAB11B00F08B7D /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		14675A192BEAB11C00F08B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14675A1B2BEAB11C00F08B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14C9BA942BFFD03100ECEBA9 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		14DF95032BDB02450091CFAF /* NewToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoItemView.swift; sourceTree = "<group>"; };
 		14DF95052BDB02520091CFAF /* ToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemView.swift; sourceTree = "<group>"; };
 		6E38E9D92BF97AD50032A78E /* NoteFileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFileListView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				14175BE22BE0237700F775A7 /* ToDo */,
 				14175BE42BE023BB00F775A7 /* Settings */,
 				14175BE52BE0268300F775A7 /* TabViewer */,
+				14C9BA932BFFD00B00ECEBA9 /* Tips */,
 				140D39DC2BD93FF10036DBAE /* Assets.xcassets */,
 				140D39DE2BD93FF10036DBAE /* Timeli.entitlements */,
 				140D39DF2BD93FF10036DBAE /* Preview Content */,
@@ -234,6 +237,14 @@
 				14675A1B2BEAB11C00F08B7D /* Info.plist */,
 			);
 			path = RemindersWidget;
+			sourceTree = "<group>";
+		};
+		14C9BA932BFFD00B00ECEBA9 /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				14C9BA942BFFD03100ECEBA9 /* Tips.swift */,
+			);
+			name = Tips;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +357,7 @@
 				140D39DB2BD93FF00036DBAE /* ContentView.swift in Sources */,
 				14175BEB2BE02F9E00F775A7 /* ReminderItemView.swift in Sources */,
 				14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */,
+				14C9BA952BFFD03100ECEBA9 /* Tips.swift in Sources */,
 				140D39D92BD93FF00036DBAE /* TimeliApp.swift in Sources */,
 				14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */,
 				140D39F22BD941960036DBAE /* ToDoView.swift in Sources */,
