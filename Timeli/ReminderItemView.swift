@@ -57,8 +57,6 @@ struct ReminderViewExpandedView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
-            Text(title)
-                .font(.title)
             HStack{
                 ZStack(alignment: .leading){
                     RoundedRectangle(cornerRadius: 10)
@@ -66,10 +64,14 @@ struct ReminderViewExpandedView: View {
                         .frame(width: 235, height: 115, alignment: .leading)
                     Group{
                         VStack(alignment: .leading){
-                            Text("Description:")
-                                .font(.title3)
+                            Text("Title:")
                                 .bold()
-                            Text(descrip)
+                                .font(.title3)
+                                .offset(x: 10)
+                            Text(title)
+                                .font(.system(size: 28))
+                                .bold()
+                                .offset(x: 10)
                         }
                     }
                 }
@@ -84,11 +86,15 @@ struct ReminderViewExpandedView: View {
                             Text("Due:")
                                 .font(.title3)
                                 .bold()
+                                .offset(x: 10)
                             Text("\(formatDate(dueDate))")
+                                .offset(x: 10)
                             Text("Made on:")
+                                .offset(x: 10)
                                 .font(.title3)
                                 .bold()
                             Text("\(formatDate(dateMade))")
+                                .offset(x: 10)
                             
                         }                    }
                 }
@@ -110,14 +116,13 @@ struct ReminderViewExpandedView: View {
             Group{
                 VStack(alignment: .leading){
                     Group{
-                        Text(" Due:")
-                            .font(.title3)
+                        Text(" Description:")
+                            .font(.system(size: 36))
                             .bold()
-                        Text(" \(formatDate(dueDate))")
-                        Text(" Made on:")
-                            .font(.title3)
-                            .bold()
-                        Text(" \(formatDate(dateMade))")
+                            .offset(x: 10, y: 30)
+                        Text(" \(descrip)")
+                            .offset(x: 10, y: 30)
+                            .font(.system(size: 32))
                     }
                     Spacer()
                     
@@ -138,5 +143,5 @@ struct ReminderViewExpandedView: View {
     
 }
 #Preview {
-    ReminderViewExpandedView(title: "1234Test4321", descrip: "1234Test4321\n1\n2\n3", dueDate: Date.now, dateMade: Date.now)
+    ReminderViewExpandedView(title: "1234Test4321", descrip: "12", dueDate: Date.now, dateMade: Date.now)
 }
