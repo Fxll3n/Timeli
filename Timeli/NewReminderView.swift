@@ -8,8 +8,12 @@
 import SwiftUI
 import SwiftData
 import UserNotifications
+import TipKit
+
 
 struct NewReminderView: View {
+    var setTitleAndDescriptionRemind = setNameAndTitleReminder()
+    var specifyDate = specifyATimeReminder()
     
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
@@ -20,15 +24,31 @@ struct NewReminderView: View {
     @State private var timeBeforeNotif = 10
     @State private var showAlert = false
     @State private var alertReason = ""
+    @State private var text1Changed = false
+    @State private var text2Changed = false
     
     var body: some View {
         VStack{
             Group {
                 TextField("Reminder Title", text: $inputTitle)
+                    .onChange(of: inputTitle){
+                        text1Changed = true
+                    }
                 TextField("Reminder Description", text: $inputDescrip)
+                    .onChange(of: inputDescrip){
+                        text2Changed = true
+                        if text1Changed && text2Changed{
+                            setTitleAndDescriptionRemind.invalidate(reason: .actionPerformed)
+                        }
+                    }
             }.textFieldStyle(.roundedBorder)
              .multilineTextAlignment(.leading)
+             .popoverTip(setTitleAndDescriptionRemind)
+             
             DatePicker("Due Date:", selection: $inputDueDate)
+            if text1Changed && text2Changed{
+                TipView(specifyDate)
+            }
             Button("Submit"){
                 if inputTitle != "" && inputDescrip != ""{
                     addItem(title: inputTitle, descrip: inputDescrip, due: inputDueDate)
@@ -49,6 +69,13 @@ struct NewReminderView: View {
             .alert("\(alertReason)", isPresented: $showAlert) {
                 Button("OK", role: .cancel) { }
             }
+        }
+        .task{
+            // Configure and load your tips at app launch.
+            try? Tips.configure([
+                .displayFrequency(.immediate),
+                .datastoreLocation(.applicationDefault)
+            ])
         }
         .padding()
         

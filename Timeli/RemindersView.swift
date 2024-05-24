@@ -51,6 +51,7 @@ struct RemindersView: View {
                         .shadow(radius: 10)
                     Button{
                         isMakingNew.toggle()
+                        makeReminderTip.invalidate(reason: .actionPerformed)
                     }label:{
                         ZStack{
                             Circle()
@@ -73,13 +74,7 @@ struct RemindersView: View {
                 }.padding()
                 
             }
-            .task {
-                // Configure and load your tips at app launch.
-                try? Tips.configure([
-                    .displayFrequency(.immediate),
-                    .datastoreLocation(.applicationDefault)
-                ])
-            }
+            
     }
     
     func deleteItem(_ item: RemindModel){

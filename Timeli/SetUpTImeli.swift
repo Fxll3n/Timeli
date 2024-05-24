@@ -60,7 +60,7 @@ struct SetUpFeatures: View {
             Spacer()
             HStack{
                 NavigationLink{
-                    ContentView().navigationBarBackButtonHidden(true) // Hide the "Back" button
+                    
                     
                     
                 } label: {

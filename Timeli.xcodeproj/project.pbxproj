@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		14057B592BE1DC10000CBD8B /* RectModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14057B582BE1DC10000CBD8B /* RectModifierView.swift */; };
 		140D39D92BD93FF00036DBAE /* TimeliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39D82BD93FF00036DBAE /* TimeliApp.swift */; };
-		140D39DB2BD93FF00036DBAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39DA2BD93FF00036DBAE /* ContentView.swift */; };
 		140D39DD2BD93FF10036DBAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140D39DC2BD93FF10036DBAE /* Assets.xcassets */; };
 		140D39E12BD93FF10036DBAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140D39E02BD93FF10036DBAE /* Preview Assets.xcassets */; };
 		140D39E82BD9406E0036DBAE /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39E72BD9406E0036DBAE /* NotesModel.swift */; };
 		140D39EA2BD940A00036DBAE /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39E92BD940A00036DBAE /* NotesView.swift */; };
 		140D39EC2BD940D20036DBAE /* SetUpTImeli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39EB2BD940D20036DBAE /* SetUpTImeli.swift */; };
-		140D39F02BD941630036DBAE /* TabViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39EF2BD941630036DBAE /* TabViewerView.swift */; };
 		140D39F22BD941960036DBAE /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39F12BD941960036DBAE /* ToDoView.swift */; };
 		140D39F52BD943010036DBAE /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 140D39F42BD943010036DBAE /* Markdown */; };
 		140D39F72BD94BB90036DBAE /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39F62BD94BB90036DBAE /* RemindersView.swift */; };
@@ -34,6 +32,8 @@
 		14C9BA952BFFD03100ECEBA9 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C9BA942BFFD03100ECEBA9 /* Tips.swift */; };
 		14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95032BDB02450091CFAF /* NewToDoItemView.swift */; };
 		14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95052BDB02520091CFAF /* ToDoItemView.swift */; };
+		14F81F1E2C00118600DD93AB /* AnimatedTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 14F81F1D2C00118600DD93AB /* AnimatedTabBar */; };
+		14F81F232C00182800DD93AB /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F81F222C00182800DD93AB /* TabBarButton.swift */; };
 		6E38E9DA2BF97AD50032A78E /* NoteFileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38E9D92BF97AD50032A78E /* NoteFileListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,14 +65,12 @@
 		14057B582BE1DC10000CBD8B /* RectModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectModifierView.swift; sourceTree = "<group>"; };
 		140D39D52BD93FF00036DBAE /* Timeli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		140D39D82BD93FF00036DBAE /* TimeliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeliApp.swift; sourceTree = "<group>"; };
-		140D39DA2BD93FF00036DBAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		140D39DC2BD93FF10036DBAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		140D39DE2BD93FF10036DBAE /* Timeli.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Timeli.entitlements; sourceTree = "<group>"; };
 		140D39E02BD93FF10036DBAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		140D39E72BD9406E0036DBAE /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 		140D39E92BD940A00036DBAE /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		140D39EB2BD940D20036DBAE /* SetUpTImeli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpTImeli.swift; sourceTree = "<group>"; };
-		140D39EF2BD941630036DBAE /* TabViewerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewerView.swift; sourceTree = "<group>"; };
 		140D39F12BD941960036DBAE /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		140D39F62BD94BB90036DBAE /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
 		140D39F82BD94C100036DBAE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -91,6 +89,7 @@
 		14C9BA942BFFD03100ECEBA9 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		14DF95032BDB02450091CFAF /* NewToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoItemView.swift; sourceTree = "<group>"; };
 		14DF95052BDB02520091CFAF /* ToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemView.swift; sourceTree = "<group>"; };
+		14F81F222C00182800DD93AB /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		6E38E9D92BF97AD50032A78E /* NoteFileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFileListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140D39F52BD943010036DBAE /* Markdown in Frameworks */,
+				14F81F1E2C00118600DD93AB /* AnimatedTabBar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				140D39D82BD93FF00036DBAE /* TimeliApp.swift */,
-				140D39DA2BD93FF00036DBAE /* ContentView.swift */,
 				14175BDF2BE0230C00F775A7 /* Models */,
 				14175BE02BE0232C00F775A7 /* Notes */,
 				14175BE32BE0239900F775A7 /* Reminders */,
@@ -212,7 +211,7 @@
 		14175BE52BE0268300F775A7 /* TabViewer */ = {
 			isa = PBXGroup;
 			children = (
-				140D39EF2BD941630036DBAE /* TabViewerView.swift */,
+				14F81F222C00182800DD93AB /* TabBarButton.swift */,
 			);
 			name = TabViewer;
 			sourceTree = "<group>";
@@ -267,6 +266,7 @@
 			name = Timeli;
 			packageProductDependencies = (
 				140D39F42BD943010036DBAE /* Markdown */,
+				14F81F1D2C00118600DD93AB /* AnimatedTabBar */,
 			);
 			productName = Timeli;
 			productReference = 140D39D52BD93FF00036DBAE /* Timeli.app */;
@@ -318,6 +318,7 @@
 			mainGroup = 140D39CC2BD93FF00036DBAE;
 			packageReferences = (
 				140D39F32BD943010036DBAE /* XCRemoteSwiftPackageReference "swiftui-markdown" */,
+				14F81F1C2C00108C00DD93AB /* XCRemoteSwiftPackageReference "AnimatedTabBar" */,
 			);
 			productRefGroup = 140D39D62BD93FF00036DBAE /* Products */;
 			projectDirPath = "";
@@ -354,12 +355,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				140D39DB2BD93FF00036DBAE /* ContentView.swift in Sources */,
 				14175BEB2BE02F9E00F775A7 /* ReminderItemView.swift in Sources */,
 				14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */,
 				14C9BA952BFFD03100ECEBA9 /* Tips.swift in Sources */,
 				140D39D92BD93FF00036DBAE /* TimeliApp.swift in Sources */,
 				14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */,
+				14F81F232C00182800DD93AB /* TabBarButton.swift in Sources */,
 				140D39F22BD941960036DBAE /* ToDoView.swift in Sources */,
 				6E38E9DA2BF97AD50032A78E /* NoteFileListView.swift in Sources */,
 				14175BE72BE0289800F775A7 /* RemindersModel.swift in Sources */,
@@ -368,7 +369,6 @@
 				140D39F92BD94C100036DBAE /* SettingsView.swift in Sources */,
 				140D39E82BD9406E0036DBAE /* NotesModel.swift in Sources */,
 				14175BE92BE02AEE00F775A7 /* NewReminderView.swift in Sources */,
-				140D39F02BD941630036DBAE /* TabViewerView.swift in Sources */,
 				14057B592BE1DC10000CBD8B /* RectModifierView.swift in Sources */,
 				140D39F72BD94BB90036DBAE /* RemindersView.swift in Sources */,
 			);
@@ -527,6 +527,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Timeli;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -568,6 +569,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Timeli;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -694,6 +696,14 @@
 				kind = branch;
 			};
 		};
+		14F81F1C2C00108C00DD93AB /* XCRemoteSwiftPackageReference "AnimatedTabBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/AnimatedTabBar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -701,6 +711,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 140D39F32BD943010036DBAE /* XCRemoteSwiftPackageReference "swiftui-markdown" */;
 			productName = Markdown;
+		};
+		14F81F1D2C00118600DD93AB /* AnimatedTabBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14F81F1C2C00108C00DD93AB /* XCRemoteSwiftPackageReference "AnimatedTabBar" */;
+			productName = AnimatedTabBar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

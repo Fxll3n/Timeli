@@ -1,0 +1,24 @@
+{
+  "originHash" : "5bffd86b9b562fd3b4d64b93e460bd155ad1f83a8ad7fa1af893bc0fe7f978bb",
+  "pins" : [
+    {
+      "identity" : "animatedtabbar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/exyte/AnimatedTabBar",
+      "state" : {
+        "revision" : "f5f342227283e76c7b49371e735516bac3caef68",
+        "version" : "0.1.2"
+      }
+    },
+    {
+      "identity" : "swiftui-markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jaywcjlove/swiftui-markdown",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c7e1dd8226cd788a4dd5c654b98e672916c9e96d"
+      }
+    }
+  ],
+  "version" : 3
+}
