@@ -14,38 +14,63 @@ import AnimatedTabBar
 struct TimeliApp: App {
     @AppStorage("currentView") var currentView = 0
     @State var isSetUp = UserDefaults.standard.bool(forKey: "isSetUp")
+    @State var currentColor = Color.black
+    let selectionColor = Color(white: 1, opacity: 1)
+    let unselectedColor = Color(white: 1, opacity: 0.5)
+    @State var colorData = ColorData()
     var body: some Scene {
         
         WindowGroup {
             NavigationStack{
+                
                 if isSetUp == true{
                     switch currentView{
                     case 0:
                         NotesView()
+                            .onAppear(){
+                                currentColor = colorData.loadColor()
+                            }
                     case 1:
                         RemindersView()
+                            .onAppear(){
+                                currentColor = colorData.loadColor()
+                            }
                     case 2:
                         ToDoListView()
+                            .onAppear(){
+                                currentColor = colorData.loadColor()
+                            }
                     case 3:
                         SettingsView()
+                            .onAppear(){
+                                currentColor = colorData.loadColor()
+                            }
                     default:
                         NotesView()
+                            .onAppear(){
+                                currentColor = colorData.loadColor()
+                            }
                     }
                         
-                    
-                    AnimatedTabBar(selectedIndex:$currentView){
-                        TabBarButton(name: "Notes", icon: "text.cursor")
-                        TabBarButton(name: "Reminders", icon: "clock.circle")
-                        TabBarButton(name: "To-Do", icon: "list.bullet.clipboard")
-                        TabBarButton(name: "Settings", icon: "gearshape")
+                    Spacer()
+                    Group{
+                        AnimatedTabBar(selectedIndex:$currentView){
+                            TabBarButton(name: "Notes", icon: "text.cursor")
+                            TabBarButton(name: "Reminders", icon: "clock.circle")
+                            TabBarButton(name: "To-Do", icon: "list.bullet.clipboard")
+                            TabBarButton(name: "Settings", icon: "gearshape")
+                        }
+                        .ballTrajectory(.straight)
+                        .ballColor(currentColor)
+                        .cornerRadius(15)
+                        .barColor(currentColor)
+                        .unselectedColor(unselectedColor)
+                        .selectedColor(selectionColor)
+                        
                     }
-                    .ballTrajectory(.straight)
-                    .ballAnimation(.easeInOut)
-                    .ballColor(.black)
-                    .cornerRadius(25.5)
-                    .barColor(.black)
-                    .unselectedColor(.gray)
-                    .selectedColor(.white)
+                    .frame(height: 85)
+                    .padding()
+                    
                     
                 }else{
                     SetupTimeliStart()
@@ -60,6 +85,9 @@ struct TimeliApp: App {
                             
                         }
                 }
+            }
+            .onAppear(){
+                colorData.loadColor()
             }
             .task{
                 try? Tips.configure()

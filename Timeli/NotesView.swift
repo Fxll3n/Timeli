@@ -19,52 +19,60 @@ struct NotesView: View {
     @FocusState private var fileNameIsFocused: Bool
     @State private var mdContent = "abcdefghijklmnopqrstuvwxyz\n**abcdefghijklmnopqrstuvwxyz**\n*abcdefghijklmnopqrstuvwxyz*\n~abcdefghijklmnopqrstuvwxyz~\n# abcdefghijklmnopqrstuvwxyz"
     
+    @State private var selectedColor: Color = Color.black
+    @State private var colorData = ColorData()
+    
     var body: some View {
         VStack{
             Text("Notes")
                 .bold()
                 .font(.title)
+                .onAppear(){
+                    selectedColor = colorData.loadColor()
+                }
             HStack{
                 Spacer()
                 TextField("File Name", text: $fileName)
                     .focused($fileNameIsFocused)
                     .submitLabel(.join)
                 Spacer()
-                Button(action: {
-                    isEditing.toggle()
-                }, label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 5.0)
-                            .frame(width: 40, height: 30)
-                            .foregroundStyle(Color.blue)
-                        Text(isEditing ? "Done" : "Edit")
-                            .foregroundStyle(Color.white)
+                Group{
+                    Button(action: {
+                        isEditing.toggle()
+                    }, label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 5.0)
+                                .frame(width: 40, height: 30)
+                                .foregroundStyle(selectedColor)
+                            Text(isEditing ? "Done" : "Edit")
+                                .foregroundStyle(Color.white)
+                        }
+                            
+                    })
+                    Button {
+                        showSavePopup = true
+                    } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 5.0)
+                                .frame(width: 40, height: 30)
+                                .foregroundStyle(selectedColor)
+                            Text("Save")
+                                .foregroundStyle(Color.white)
+                        }
+                    
                     }
-                        
-                })
-                Button {
-                    showSavePopup = true
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 5.0)
-                            .frame(width: 40, height: 30)
-                            .foregroundStyle(Color.blue)
-                        Text("Save")
-                            .foregroundStyle(Color.white)
+                    Button {
+                        showFileList = true
+                    } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 5.0)
+                                .frame(width: 40, height: 30)
+                                .foregroundStyle(selectedColor)
+                            Text("Load")
+                                .foregroundStyle(Color.white)
+                        }
+                    
                     }
-                
-                }
-                Button {
-                    showFileList = true
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 5.0)
-                            .frame(width: 40, height: 30)
-                            .foregroundStyle(Color.blue)
-                        Text("Load")
-                            .foregroundStyle(Color.white)
-                    }
-                
                 }
             }.padding(.trailing)
             

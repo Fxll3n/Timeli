@@ -18,11 +18,17 @@ struct RemindersView: View {
     
     @State private var isMakingNew = false
     
+    @State private var selectedColor: Color = Color.black
+    @State private var colorData = ColorData()
+    
     var body: some View {
         VStack{
             Text("Reminders")
                 .bold()
                 .font(.title)
+        }
+        .onAppear(){
+            selectedColor = colorData.loadColor()
         }
         
         
@@ -55,7 +61,7 @@ struct RemindersView: View {
                     }label:{
                         ZStack{
                             Circle()
-                                .foregroundStyle(Color.black)
+                                .foregroundStyle(selectedColor)
                                 .frame(width: 70, height: 70)
                             Image(systemName: "plus")
                                 .resizable()

@@ -27,6 +27,9 @@ struct NewReminderView: View {
     @State private var text1Changed = false
     @State private var text2Changed = false
     
+    @State private var selectedColor: Color = Color.black
+    @State private var colorData = ColorData()
+    
     var body: some View {
         VStack{
             Group {
@@ -66,9 +69,13 @@ struct NewReminderView: View {
                 }
                 
             }
+            .foregroundStyle(selectedColor)
             .alert("\(alertReason)", isPresented: $showAlert) {
                 Button("OK", role: .cancel) { }
             }
+        }
+        .onAppear(){
+            selectedColor = colorData.loadColor()
         }
         .task{
             // Configure and load your tips at app launch.

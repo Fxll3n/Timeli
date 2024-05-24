@@ -15,55 +15,73 @@ struct ToDoListView: View {
     
     @State private var isMakingNewItem = false
     
+    @State private var selectedColor: Color = .black
+    @State private var colorData = ColorData()
+    
     var body: some View {
         VStack {
             Text("To Do List")
                 .bold()
                 .font(.title)
-            }
-            List{
+                .padding(.top)
+            
+            List {
                 ForEach(items) { item in
-                    ToDoItemView(title: item.title, text: item.text)
+                    ToDoItemView(execute: {save(item)}, title: item.title, text: item.text, isChecked: item.isChecked)
                 }
-                .onDelete{ indexes in
-                    for index in indexes{
+
+
+                .onDelete { indexes in
+                    for index in indexes {
                         deleteItem(items[index])
                     }
                 }
-            }.ignoresSafeArea()
+            }
+            .listStyle(InsetGroupedListStyle())
+            .onAppear {
+                selectedColor = colorData.loadColor()
+            }
             
-                .safeAreaInset(edge: .bottom, alignment: .trailing, spacing: 10) {
-                    Button{
-                        isMakingNewItem.toggle()
-                    }label:{
-                        ZStack{
-                            Circle()
-                                .padding(.trailing)
-                                .foregroundStyle(Color.black)
-                                .frame(width: 70, height: 70)
-                            Image(systemName: "plus")
-                                .resizable()
-                                .frame(width: 40, height: 40)
-                                .foregroundStyle(Color.white)
-                                .padding(.trailing)
-                                .frame(width: 100, height: 100)
-                                .sheet(isPresented: $isMakingNewItem){
-                                    NewToDoItemView()
-                            
-                        }
-         
-                        
+            Spacer()
+            
+            HStack {
+                Spacer()
+                Button(action: {
+                    isMakingNewItem.toggle()
+                }) {
+                    ZStack {
+                        Circle()
+                            .foregroundStyle(selectedColor)
+                            .frame(width: 70, height: 70)
+                        Image(systemName: "plus")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundStyle(Color.white)
                     }
                 }
-            
+                .padding()
+                .sheet(isPresented: $isMakingNewItem) {
+                    NewToDoItemView()
+                }
+            }
         }
     }
     
-    func deleteItem(_ item: ToDoModel){
+    func deleteItem(_ item: ToDoModel) {
         context.delete(item)
     }
+    
+    func save(_ item: ToDoModel) {
+        do {
+            try context.save()
+            print("Item saved successfully.")
+        } catch {
+            print("Error saving item: \(error)")
+        }
+    }
+
 }
 
-#Preview() {
+#Preview {
     ToDoListView()
 }
