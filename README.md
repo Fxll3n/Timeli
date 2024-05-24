@@ -1,7 +1,7 @@
 
 <p align="center">
     <h1 align="center">TIMELI</h1>
-	![Logo](https://github.com/Fxll3n/Timeli/blob/main/Logo.jpeg?raw=true)
+	![timeliIconWhite](https://github.com/Fxll3n/Timeli/assets/143033010/e0efbdbe-3a32-4d19-8a1b-fa9c4df00672)
 
 </p>
 <p align="center">
