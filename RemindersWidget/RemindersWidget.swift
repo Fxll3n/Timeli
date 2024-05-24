@@ -1,86 +1,57 @@
-//
-//  RemindersWidget.swift
-//  RemindersWidget
-//
-//  Created by Angel Bitsov on 5/7/24.
-//
+// RemindSharedView.swift
 
 import WidgetKit
 import SwiftUI
-import SwiftData
+import Timeli
 
-struct Provider: AppIntentTimelineProvider {
-    func placeholder(in context: Context) -> RemindEntry {
-        RemindEntry(date: Date(), configuration: ConfigurationAppIntent())
-    }
-
-    func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> RemindEntry {
-        RemindEntry(date: Date(), configuration: configuration)
-    }
+struct RemindSharedView: View {
+    @Environment(\.modelContext) private var context
     
-    func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<RemindEntry> {
-        var entries: [RemindEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = RemindEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
-        }
-
-        return Timeline(entries: entries, policy: .atEnd)
-    }
-}
-
-struct RemindEntry: TimelineEntry {
-    let date: Date
-    let configuration: ConfigurationAppIntent
-}
-
-struct RemindersWidgetEntryView : View {
-    var entry: Provider.Entry
-
     var body: some View {
         VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
+            Text(context.title)
+            Text(context.descrip)
+            // Add other relevant views (due date, etc.)
         }
     }
-        
 }
 
-struct RemindersWidget: Widget {
-    let kind: String = "RemindersWidget"
-
+// RemindWidget.swift
+struct RemindWidget: Widget {
     var body: some WidgetConfiguration {
-        AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
-            RemindersWidgetEntryView(entry: entry)
-                .containerBackground(.fill.tertiary, for: .widget)
+        IntentConfiguration(kind: "RemindWidget", intent: RemindWidgetIntent.self, provider: RemindProvider()) { entry in
+            RemindWidgetEntryView(entry: entry)
+        }
+        .configurationDisplayName("Reminders")
+        .description("Display your reminders")
+    }
+}
+
+struct RemindWidgetEntry: TimelineEntry {
+    var date: Date
+    var remind: RemindModel?
+}
+
+struct RemindWidgetEntryView: View {
+    var entry: RemindWidgetEntry
+    
+    var body: some View {
+        if let remind = entry.remind {
+            RemindSharedView(remind: remind)
+        } else {
+            Text("No reminders")
         }
     }
 }
 
-extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "😀"
-        return intent
-    }
+// RemindWidgetIntent.swift (if you want customization)
+struct RemindWidgetIntent: WidgetConfigurationIntent {
+    static var title: LocalizedStringResource = "Select Reminder"
+    static var description = IntentDescription("Display a specific reminder")
     
-    fileprivate static var starEyes: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "🤩"
-        return intent
+    @Parameter var remind: RemindModelEntity?
+    
+    init(remind: RemindModelEntity) {
+        self.remind = remind
     }
-}
-
-#Preview(as: .systemSmall) {
-    RemindersWidget()
-} timeline: {
-    RemindEntry(date: .now, configuration: .smiley)
-    RemindEntry(date: .now, configuration: .starEyes)
 }

@@ -7,8 +7,11 @@
 
 import SwiftUI
 import SwiftData
+import TipKit
 
 struct ToDoListView: View {
+    
+    @State var makeNewToDoItemTip = makeNewToDoItem()
     
     @Environment(\.modelContext) private var context
     @Query private var items: [ToDoModel]
@@ -23,7 +26,13 @@ struct ToDoListView: View {
             Text("To Do List")
                 .bold()
                 .font(.title)
-                .padding(.top)
+                .onAppear {
+                    selectedColor = colorData.loadColor()
+                }
+            
+            .sheet(isPresented: $isMakingNewItem) {
+                NewToDoItemView()
+            }
             
             List {
                 ForEach(items) { item in
@@ -36,34 +45,34 @@ struct ToDoListView: View {
                         deleteItem(items[index])
                     }
                 }
-            }
-            .listStyle(InsetGroupedListStyle())
-            .onAppear {
-                selectedColor = colorData.loadColor()
-            }
+            }.ignoresSafeArea()
             
-            Spacer()
             
-            HStack {
-                Spacer()
-                Button(action: {
-                    isMakingNewItem.toggle()
-                }) {
-                    ZStack {
-                        Circle()
-                            .foregroundStyle(selectedColor)
-                            .frame(width: 70, height: 70)
-                        Image(systemName: "plus")
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                            .foregroundStyle(Color.white)
+            
+            .safeAreaInset(edge: .bottom, alignment: .trailing, spacing: 0){
+                HStack {
+                    TipView(makeNewToDoItemTip, arrowEdge: .trailing)
+                        .shadow(radius: 10)
+                    Button(action: {
+                        isMakingNewItem.toggle()
+                    }) {
+                        ZStack{
+                            Circle()
+                                .foregroundStyle(selectedColor)
+                                .frame(width: 70, height: 70)
+                            Image(systemName: "plus")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .foregroundStyle(Color.white)
+                        }
                     }
-                }
-                .padding()
-                .sheet(isPresented: $isMakingNewItem) {
-                    NewToDoItemView()
-                }
+                    
+                    
+                }.padding()
             }
+            
+            
+            
         }
     }
     

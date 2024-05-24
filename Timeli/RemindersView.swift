@@ -67,7 +67,6 @@ struct RemindersView: View {
                                 .resizable()
                                 .frame(width: 40, height: 40)
                                 .foregroundStyle(Color.white)
-                                .frame(width: 100, height: 100)
                                 .sheet(isPresented: $isMakingNew){
                                     NewToDoItemView()
                                     

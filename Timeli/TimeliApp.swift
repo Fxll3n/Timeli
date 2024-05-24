@@ -13,11 +13,14 @@ import AnimatedTabBar
 @main
 struct TimeliApp: App {
     @AppStorage("currentView") var currentView = 0
+    
     @State var isSetUp = UserDefaults.standard.bool(forKey: "isSetUp")
+    
     @State var currentColor = Color.black
     let selectionColor = Color(white: 1, opacity: 1)
     let unselectedColor = Color(white: 1, opacity: 0.5)
     @State var colorData = ColorData()
+    
     var body: some Scene {
         
         WindowGroup {
