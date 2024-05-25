@@ -8,10 +8,13 @@
 import SwiftUI
 import SwiftData
 import TipKit
+import PopupView
 
 struct ToDoListView: View {
     
     @State var makeNewToDoItemTip = makeNewToDoItem()
+    
+    @AppStorage("didCreateNewToDo") var didCreateNewToDo = false
     
     @Environment(\.modelContext) private var context
     @Query private var items: [ToDoModel]
@@ -21,11 +24,27 @@ struct ToDoListView: View {
     @State private var selectedColor: Color = .black
     @State private var colorData = ColorData()
     
-    var body: some View {
+    var body: some View { 
         VStack {
             Text("To Do List")
                 .bold()
                 .font(.title)
+                .onChange(of: didCreateNewToDo){
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 4.0){
+                        didCreateNewToDo = false
+                    }
+                }
+            
+                .popup(isPresented: $didCreateNewToDo) {
+                    SuccessfullyCreatedNewToDo()
+                } customize: {
+                    $0.isOpaque(true)
+                        .autohideIn(2)
+                        .type(.floater())
+                        .position(.top)
+                        .animation(.spring())
+                }
+            
                 .onAppear {
                     selectedColor = colorData.loadColor()
                 }
@@ -36,7 +55,7 @@ struct ToDoListView: View {
             
             List {
                 ForEach(items) { item in
-                    ToDoItemView(execute: {save(item)}, title: item.title, text: item.text, isChecked: item.isChecked)
+                    ToDoItemView(title: item.title, text: item.text, isChecked: item.isChecked)
                 }
 
 

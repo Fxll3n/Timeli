@@ -13,7 +13,7 @@ struct ToDoItemView: View {
     @Environment(\.modelContext) private var context
     @Query private var items: [ToDoModel]
     
-    let execute: () -> Void
+    
     
     @State var title: String
     @State var text: String
@@ -30,7 +30,6 @@ struct ToDoItemView: View {
                         .foregroundStyle(.gray)
                         .onTapGesture {
                             isChecked.toggle()
-                            execute()
                         }
                     VStack(alignment: .leading){
                         Text("\(title)")
@@ -53,9 +52,7 @@ struct ToDoItemView: View {
                     .scaledToFit()
                     .frame(width: 30, height: 30)
                     .onTapGesture {
-                        isChecked.toggle()
-                        execute()
-                    }
+                        isChecked.toggle()                    }
                 VStack(alignment: .leading){
                     Text("\(title)")
                         .font(.title)

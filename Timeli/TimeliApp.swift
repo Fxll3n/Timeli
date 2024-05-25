@@ -9,12 +9,14 @@ import SwiftUI
 import SwiftData
 import TipKit
 import AnimatedTabBar
+import PopupView
 
 @main
 struct TimeliApp: App {
     @AppStorage("currentView") var currentView = 0
     
-    @State var isSetUp = UserDefaults.standard.bool(forKey: "isSetUp")
+    @AppStorage("isSetUp") var isSetUp = false
+    @AppStorage("isSettingUp") var isSettingUp = false
     
     @State var currentColor = Color.black
     let selectionColor = Color(white: 1, opacity: 1)
@@ -25,72 +27,74 @@ struct TimeliApp: App {
         
         WindowGroup {
             NavigationStack{
-                
-                if isSetUp == true{
-                    switch currentView{
-                    case 0:
-                        NotesView()
-                            .onAppear(){
-                                currentColor = colorData.loadColor()
-                            }
-                    case 1:
-                        RemindersView()
-                            .onAppear(){
-                                currentColor = colorData.loadColor()
-                            }
-                    case 2:
-                        ToDoListView()
-                            .onAppear(){
-                                currentColor = colorData.loadColor()
-                            }
-                    case 3:
-                        SettingsView()
-                            .onAppear(){
-                                currentColor = colorData.loadColor()
-                            }
-                    default:
-                        NotesView()
-                            .onAppear(){
-                                currentColor = colorData.loadColor()
-                            }
-                    }
-                        
-                    Spacer()
-                    Group{
-                        AnimatedTabBar(selectedIndex:$currentView){
-                            TabBarButton(name: "Notes", icon: "text.cursor")
-                            TabBarButton(name: "Reminders", icon: "clock.circle")
-                            TabBarButton(name: "To-Do", icon: "list.bullet.clipboard")
-                            TabBarButton(name: "Settings", icon: "gearshape")
-                        }
-                        .ballTrajectory(.straight)
-                        .ballColor(currentColor)
-                        .cornerRadius(15)
-                        .barColor(currentColor)
-                        .unselectedColor(unselectedColor)
-                        .selectedColor(selectionColor)
-                        
-                    }
-                    .frame(height: 85)
-                    .padding()
-                    
-                    
-                }else{
-                    SetupTimeliStart()
+                switch currentView{
+                case 0:
+                    NotesView()
                         .onAppear(){
-                            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
-                                if granted {
-                                    print("Notification authorization granted")
-                                } else {
-                                    print("Notification authorization denied")
-                                }
-                            }
-                            
+                            currentColor = colorData.loadColor()
+                        }
+                case 1:
+                    RemindersView()
+                        .onAppear(){
+                            currentColor = colorData.loadColor()
+                        }
+                case 2:
+                    ToDoListView()
+                        .onAppear(){
+                            currentColor = colorData.loadColor()
+                        }
+                case 3:
+                    SettingsView()
+                        .onAppear(){
+                            currentColor = colorData.loadColor()
+                        }
+                default:
+                    NotesView()
+                        .onAppear(){
+                            currentColor = colorData.loadColor()
                         }
                 }
+                    
+                Spacer()
+                Group{
+                    AnimatedTabBar(selectedIndex:$currentView){
+                        TabBarButton(name: "Notes", icon: "text.cursor")
+                        TabBarButton(name: "Reminders", icon: "clock.circle")
+                        TabBarButton(name: "To-Do", icon: "list.bullet.clipboard")
+                        TabBarButton(name: "Settings", icon: "gearshape")
+                    }
+                    .ballTrajectory(.straight)
+                    .ballColor(currentColor)
+                    .cornerRadius(15)
+                    .barColor(currentColor)
+                    .unselectedColor(unselectedColor)
+                    .selectedColor(selectionColor)
+                    
+                }
+                .popup(isPresented: $isSettingUp){
+                    WelcomePopup(color: .black)
+                } customize: {
+                    $0.isOpaque(true)
+                        .backgroundColor(.black.opacity(0.5))
+                        
+                }
+                
+                .frame(height: 85)
+                .padding()
+                .onAppear(){
+                    if isSetUp == true{
+                        isSettingUp = false
+                    }else{
+                        isSettingUp = true
+                    }
+                    
+                }
+                
+                
+                
             }
             .onAppear(){
-                colorData.loadColor()
+                currentColor = colorData.loadColor()
             }
             .task{
                 try? Tips.configure()
@@ -101,4 +105,6 @@ struct TimeliApp: App {
         .modelContainer(for: [ToDoModel.self, RemindModel.self])
         
     }
+    
+    
 }

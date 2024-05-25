@@ -11,7 +11,7 @@ struct ReminderItemView: View {
     @State var title: String
     @State var descrip: String
     @State var dueDate: Date
-    @State var dateMade: Date
+    @State var dateMade: Date 
     
     
     var body: some View {

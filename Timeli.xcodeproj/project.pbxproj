@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		14057B592BE1DC10000CBD8B /* RectModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14057B582BE1DC10000CBD8B /* RectModifierView.swift */; };
+		140CF2552C0188D700D8A9B7 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 140CF2542C0188D700D8A9B7 /* PopupView */; };
+		140CF2572C018EE100D8A9B7 /* PopUpsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140CF2562C018EE100D8A9B7 /* PopUpsViews.swift */; };
+		140CF25C2C01AAC500D8A9B7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140CF25B2C01AAC500D8A9B7 /* Launch Screen.storyboard */; };
 		140D39D92BD93FF00036DBAE /* TimeliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39D82BD93FF00036DBAE /* TimeliApp.swift */; };
 		140D39DD2BD93FF10036DBAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140D39DC2BD93FF10036DBAE /* Assets.xcassets */; };
 		140D39E12BD93FF10036DBAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140D39E02BD93FF10036DBAE /* Preview Assets.xcassets */; };
 		140D39E82BD9406E0036DBAE /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39E72BD9406E0036DBAE /* NotesModel.swift */; };
 		140D39EA2BD940A00036DBAE /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39E92BD940A00036DBAE /* NotesView.swift */; };
-		140D39EC2BD940D20036DBAE /* SetUpTImeli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39EB2BD940D20036DBAE /* SetUpTImeli.swift */; };
 		140D39F22BD941960036DBAE /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39F12BD941960036DBAE /* ToDoView.swift */; };
 		140D39F52BD943010036DBAE /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = 140D39F42BD943010036DBAE /* Markdown */; };
 		140D39F72BD94BB90036DBAE /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140D39F62BD94BB90036DBAE /* RemindersView.swift */; };
@@ -24,26 +26,10 @@
 		14C9BA952BFFD03100ECEBA9 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C9BA942BFFD03100ECEBA9 /* Tips.swift */; };
 		14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95032BDB02450091CFAF /* NewToDoItemView.swift */; };
 		14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95052BDB02520091CFAF /* ToDoItemView.swift */; };
-		14E12B702C00DDCC00B43DDC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14675A0C2BEAB11B00F08B7D /* WidgetKit.framework */; };
-		14E12B712C00DDCC00B43DDC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14675A0E2BEAB11B00F08B7D /* SwiftUI.framework */; };
-		14E12B742C00DDCC00B43DDC /* RemindersWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E12B732C00DDCC00B43DDC /* RemindersWidgetBundle.swift */; };
-		14E12B762C00DDCC00B43DDC /* RemindersWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E12B752C00DDCC00B43DDC /* RemindersWidget.swift */; };
-		14E12B782C00DDCE00B43DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14E12B772C00DDCE00B43DDC /* Assets.xcassets */; };
-		14E12B7C2C00DDCE00B43DDC /* RemindersWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 14E12B6F2C00DDCC00B43DDC /* RemindersWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		14F81F1E2C00118600DD93AB /* AnimatedTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 14F81F1D2C00118600DD93AB /* AnimatedTabBar */; };
 		14F81F232C00182800DD93AB /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F81F222C00182800DD93AB /* TabBarButton.swift */; };
 		6E38E9DA2BF97AD50032A78E /* NoteFileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38E9D92BF97AD50032A78E /* NoteFileListView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		14E12B7A2C00DDCE00B43DDC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 140D39CD2BD93FF00036DBAE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14E12B6E2C00DDCC00B43DDC;
-			remoteInfo = RemindersWidgetExtension;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		14675A222BEAB11C00F08B7D /* Embed Foundation Extensions */ = {
@@ -52,7 +38,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				14E12B7C2C00DDCE00B43DDC /* RemindersWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		14057B582BE1DC10000CBD8B /* RectModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectModifierView.swift; sourceTree = "<group>"; };
+		140CF2562C018EE100D8A9B7 /* PopUpsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpsViews.swift; sourceTree = "<group>"; };
+		140CF25B2C01AAC500D8A9B7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		140D39D52BD93FF00036DBAE /* Timeli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		140D39D82BD93FF00036DBAE /* TimeliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeliApp.swift; sourceTree = "<group>"; };
 		140D39DC2BD93FF10036DBAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +55,6 @@
 		140D39E02BD93FF10036DBAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		140D39E72BD9406E0036DBAE /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 		140D39E92BD940A00036DBAE /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
-		140D39EB2BD940D20036DBAE /* SetUpTImeli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpTImeli.swift; sourceTree = "<group>"; };
 		140D39F12BD941960036DBAE /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
 		140D39F62BD94BB90036DBAE /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
 		140D39F82BD94C100036DBAE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -80,11 +66,6 @@
 		14C9BA942BFFD03100ECEBA9 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		14DF95032BDB02450091CFAF /* NewToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoItemView.swift; sourceTree = "<group>"; };
 		14DF95052BDB02520091CFAF /* ToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemView.swift; sourceTree = "<group>"; };
-		14E12B6F2C00DDCC00B43DDC /* RemindersWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RemindersWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		14E12B732C00DDCC00B43DDC /* RemindersWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersWidgetBundle.swift; sourceTree = "<group>"; };
-		14E12B752C00DDCC00B43DDC /* RemindersWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersWidget.swift; sourceTree = "<group>"; };
-		14E12B772C00DDCE00B43DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		14E12B792C00DDCE00B43DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F81F222C00182800DD93AB /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		6E38E9D92BF97AD50032A78E /* NoteFileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteFileListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,28 +75,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140CF2552C0188D700D8A9B7 /* PopupView in Frameworks */,
 				140D39F52BD943010036DBAE /* Markdown in Frameworks */,
 				14F81F1E2C00118600DD93AB /* AnimatedTabBar in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14E12B6C2C00DDCC00B43DDC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14E12B712C00DDCC00B43DDC /* SwiftUI.framework in Frameworks */,
-				14E12B702C00DDCC00B43DDC /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140CF2582C018EE800D8A9B7 /* PopUps */ = {
+			isa = PBXGroup;
+			children = (
+				140CF2562C018EE100D8A9B7 /* PopUpsViews.swift */,
+			);
+			name = PopUps;
+			sourceTree = "<group>";
+		};
 		140D39CC2BD93FF00036DBAE = {
 			isa = PBXGroup;
 			children = (
 				140D39D72BD93FF00036DBAE /* Timeli */,
-				14E12B722C00DDCC00B43DDC /* RemindersWidget */,
 				14675A0B2BEAB11B00F08B7D /* Frameworks */,
 				140D39D62BD93FF00036DBAE /* Products */,
 			);
@@ -125,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				140D39D52BD93FF00036DBAE /* Timeli.app */,
-				14E12B6F2C00DDCC00B43DDC /* RemindersWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,10 +120,12 @@
 				14175BE42BE023BB00F775A7 /* Settings */,
 				14175BE52BE0268300F775A7 /* TabViewer */,
 				14C9BA932BFFD00B00ECEBA9 /* Tips */,
+				140CF2582C018EE800D8A9B7 /* PopUps */,
 				140D39DC2BD93FF10036DBAE /* Assets.xcassets */,
 				140D39DE2BD93FF10036DBAE /* Timeli.entitlements */,
 				140D39DF2BD93FF10036DBAE /* Preview Content */,
 				14057B582BE1DC10000CBD8B /* RectModifierView.swift */,
+				140CF25B2C01AAC500D8A9B7 /* Launch Screen.storyboard */,
 			);
 			path = Timeli;
 			sourceTree = "<group>";
@@ -198,7 +179,6 @@
 		14175BE42BE023BB00F775A7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				140D39EB2BD940D20036DBAE /* SetUpTImeli.swift */,
 				140D39F82BD94C100036DBAE /* SettingsView.swift */,
 			);
 			name = Settings;
@@ -229,17 +209,6 @@
 			name = Tips;
 			sourceTree = "<group>";
 		};
-		14E12B722C00DDCC00B43DDC /* RemindersWidget */ = {
-			isa = PBXGroup;
-			children = (
-				14E12B732C00DDCC00B43DDC /* RemindersWidgetBundle.swift */,
-				14E12B752C00DDCC00B43DDC /* RemindersWidget.swift */,
-				14E12B772C00DDCE00B43DDC /* Assets.xcassets */,
-				14E12B792C00DDCE00B43DDC /* Info.plist */,
-			);
-			path = RemindersWidget;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,33 +224,16 @@
 			buildRules = (
 			);
 			dependencies = (
-				14E12B7B2C00DDCE00B43DDC /* PBXTargetDependency */,
 			);
 			name = Timeli;
 			packageProductDependencies = (
 				140D39F42BD943010036DBAE /* Markdown */,
 				14F81F1D2C00118600DD93AB /* AnimatedTabBar */,
+				140CF2542C0188D700D8A9B7 /* PopupView */,
 			);
 			productName = Timeli;
 			productReference = 140D39D52BD93FF00036DBAE /* Timeli.app */;
 			productType = "com.apple.product-type.application";
-		};
-		14E12B6E2C00DDCC00B43DDC /* RemindersWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 14E12B7D2C00DDCE00B43DDC /* Build configuration list for PBXNativeTarget "RemindersWidgetExtension" */;
-			buildPhases = (
-				14E12B6B2C00DDCC00B43DDC /* Sources */,
-				14E12B6C2C00DDCC00B43DDC /* Frameworks */,
-				14E12B6D2C00DDCC00B43DDC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = RemindersWidgetExtension;
-			productName = RemindersWidgetExtension;
-			productReference = 14E12B6F2C00DDCC00B43DDC /* RemindersWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -294,9 +246,6 @@
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					140D39D42BD93FF00036DBAE = {
-						CreatedOnToolsVersion = 15.3;
-					};
-					14E12B6E2C00DDCC00B43DDC = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -313,13 +262,13 @@
 			packageReferences = (
 				140D39F32BD943010036DBAE /* XCRemoteSwiftPackageReference "swiftui-markdown" */,
 				14F81F1C2C00108C00DD93AB /* XCRemoteSwiftPackageReference "AnimatedTabBar" */,
+				140CF2532C0188D700D8A9B7 /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			productRefGroup = 140D39D62BD93FF00036DBAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				140D39D42BD93FF00036DBAE /* Timeli */,
-				14E12B6E2C00DDCC00B43DDC /* RemindersWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -329,16 +278,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140CF25C2C01AAC500D8A9B7 /* Launch Screen.storyboard in Resources */,
 				140D39E12BD93FF10036DBAE /* Preview Assets.xcassets in Resources */,
 				140D39DD2BD93FF10036DBAE /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14E12B6D2C00DDCC00B43DDC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14E12B782C00DDCE00B43DDC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14175BEB2BE02F9E00F775A7 /* ReminderItemView.swift in Sources */,
+				140CF2572C018EE100D8A9B7 /* PopUpsViews.swift in Sources */,
 				14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */,
 				14C9BA952BFFD03100ECEBA9 /* Tips.swift in Sources */,
 				140D39D92BD93FF00036DBAE /* TimeliApp.swift in Sources */,
@@ -358,7 +301,6 @@
 				140D39F22BD941960036DBAE /* ToDoView.swift in Sources */,
 				6E38E9DA2BF97AD50032A78E /* NoteFileListView.swift in Sources */,
 				14175BE72BE0289800F775A7 /* RemindersModel.swift in Sources */,
-				140D39EC2BD940D20036DBAE /* SetUpTImeli.swift in Sources */,
 				140D39EA2BD940A00036DBAE /* NotesView.swift in Sources */,
 				140D39F92BD94C100036DBAE /* SettingsView.swift in Sources */,
 				140D39E82BD9406E0036DBAE /* NotesModel.swift in Sources */,
@@ -368,24 +310,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14E12B6B2C00DDCC00B43DDC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14E12B742C00DDCC00B43DDC /* RemindersWidgetBundle.swift in Sources */,
-				14E12B762C00DDCC00B43DDC /* RemindersWidget.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		14E12B7B2C00DDCE00B43DDC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14E12B6E2C00DDCC00B43DDC /* RemindersWidgetExtension */;
-			targetProxy = 14E12B7A2C00DDCE00B43DDC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		140D39E22BD93FF10036DBAE /* Debug */ = {
@@ -510,6 +435,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Timeli/Timeli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -526,10 +452,11 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -552,6 +479,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Timeli/Timeli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -568,10 +496,11 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -585,65 +514,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		14E12B7E2C00DDCE00B43DDC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWYT76Q3DS;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RemindersWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = RemindersWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.Timeli.RemindersWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		14E12B7F2C00DDCE00B43DDC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWYT76Q3DS;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RemindersWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = RemindersWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.Timeli.RemindersWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -668,18 +538,17 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14E12B7D2C00DDCE00B43DDC /* Build configuration list for PBXNativeTarget "RemindersWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				14E12B7E2C00DDCE00B43DDC /* Debug */,
-				14E12B7F2C00DDCE00B43DDC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		140CF2532C0188D700D8A9B7 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.2;
+			};
+		};
 		140D39F32BD943010036DBAE /* XCRemoteSwiftPackageReference "swiftui-markdown" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jaywcjlove/swiftui-markdown";
@@ -699,6 +568,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		140CF2542C0188D700D8A9B7 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 140CF2532C0188D700D8A9B7 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
 		140D39F42BD943010036DBAE /* Markdown */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 140D39F32BD943010036DBAE /* XCRemoteSwiftPackageReference "swiftui-markdown" */;

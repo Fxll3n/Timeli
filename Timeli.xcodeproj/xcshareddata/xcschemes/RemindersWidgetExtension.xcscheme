@@ -16,7 +16,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "14675A092BEAB11B00F08B7D"
+               BlueprintIdentifier = "14E12B6E2C00DDCC00B43DDC"
                BuildableName = "RemindersWidgetExtension.appex"
                BlueprintName = "RemindersWidgetExtension"
                ReferencedContainer = "container:Timeli.xcodeproj">

@@ -11,6 +11,7 @@ import UserNotifications
 import TipKit
 
 
+
 struct NewReminderView: View {
     var setTitleAndDescriptionRemind = setNameAndTitleReminder()
     var specifyDate = specifyATimeReminder()
@@ -18,7 +19,9 @@ struct NewReminderView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
     
-    @State private var inputTitle = ""
+    @AppStorage("didCreateNewItem") var didCreateNewItem = true
+    
+    @State private var inputTitle = "" 
     @State private var inputDescrip = ""
     @State private var inputDueDate = Date()
     @State private var timeBeforeNotif = 10
@@ -55,6 +58,7 @@ struct NewReminderView: View {
             Button("Submit"){
                 if inputTitle != "" && inputDescrip != ""{
                     addItem(title: inputTitle, descrip: inputDescrip, due: inputDueDate)
+                    didCreateNewItem = true
                     dismiss()
                     scheduleNotification(title: inputTitle, context: "Due now!", date: inputDueDate)
                 }else if inputTitle == "" && inputDescrip != ""{

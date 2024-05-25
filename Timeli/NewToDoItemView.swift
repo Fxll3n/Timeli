@@ -10,6 +10,8 @@ import SwiftData
 
 struct NewToDoItemView: View {
     
+    @AppStorage("didCreateNewToDo") var didCreateNewToDo = true
+    
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
     
@@ -17,7 +19,7 @@ struct NewToDoItemView: View {
     @State private var inputDescrip = ""
     @State private var showAlert = false
     @State private var alertReason = ""
-    
+     
     var body: some View {
         VStack {
             Group {
@@ -30,16 +32,20 @@ struct NewToDoItemView: View {
             
             Button("Submit") {
                 if inputTitle.isEmpty && inputDescrip.isEmpty {
+                    showAlert = true
                     alertReason = "Please enter both a title and description."
                 } else if inputTitle.isEmpty {
+                    showAlert = true
                     alertReason = "Please enter a title."
                 } else if inputDescrip.isEmpty {
+                    showAlert = true
                     alertReason = "Please enter a description."
                 } else {
+                    didCreateNewToDo = true
                     addItem(title: inputTitle, text: inputDescrip)
                     dismiss()
                 }
-                showAlert = true
+                
             }
             .alert(alertReason, isPresented: $showAlert) {
                 Button("OK", role: .cancel) { }
@@ -51,17 +57,9 @@ struct NewToDoItemView: View {
     func addItem(title: String, text: String) {
         let newItem = ToDoModel(title: title, text: text, isChecked: false)
         context.insert(newItem)
-        saveContext()
     }
     
-    func saveContext() {
-        do {
-            try context.save()
-        } catch {
-            // Handle the error appropriately
-            print("Error saving context: \(error)")
-        }
-    }
+    
 }
 
 #Preview {

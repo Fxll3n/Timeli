@@ -53,10 +53,10 @@ struct SettingsView: View {
                 .font(.title3)
             Group{
                 ColorPicker("Main:", selection: $selectedColor)
-                Button("Update Colors"){
-                    colorData.saveColor(color: selectedColor)
-                }
-                .tint(selectedColor)
+                    .onChange(of: selectedColor){
+                        colorData.saveColor(color: selectedColor)
+                        print("AutoSaved")
+                    }
             }.padding(10)
         }
         

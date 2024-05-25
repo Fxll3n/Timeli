@@ -8,10 +8,13 @@
 import SwiftUI
 import SwiftData
 import TipKit
+import PopupView
 
 struct RemindersView: View {
     
     var makeReminderTip = makeNewReminderItem()
+    
+    @AppStorage("didCreateNewItem") var didCreateNewItem = false
     
     @Environment(\.modelContext) private var context
     @Query private var items: [RemindModel]
@@ -27,10 +30,24 @@ struct RemindersView: View {
                 .bold()
                 .font(.title)
         }
+        .onChange(of: didCreateNewItem){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0){
+                didCreateNewItem = false
+            }
+        } 
         .onAppear(){
             selectedColor = colorData.loadColor()
         }
         
+        .popup(isPresented: $didCreateNewItem) {
+            SuccessfullyCreatedNewItem()
+        } customize: {
+            $0.isOpaque(true)
+                .autohideIn(2)
+                .type(.floater())
+                .position(.top)
+                .animation(.spring())
+        }
         
         .sheet(isPresented: $isMakingNew){
             NewReminderView()
