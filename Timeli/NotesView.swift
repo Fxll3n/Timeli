@@ -4,7 +4,7 @@
 //
 //  Created by Angel Bitsov on 4/19/24.
 //
-
+// AI used in File Management for assistance in writing of code
 import SwiftUI
 import Markdown
 
@@ -79,6 +79,7 @@ struct NotesView: View {
             
             if isEditing{
                 TextEditor(text: $mdContent)
+                    .ignoresSafeArea(.keyboard)
             }else{
                 Markdown(content: $mdContent)
             }
@@ -93,10 +94,11 @@ struct NotesView: View {
         }
     }
     
+    
     func loadMD() {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! // Tells the app that the path for the documents would be inside of the fileManager intializer.
         let fileURL = documentsDirectory.appendingPathComponent("note.md") // Looks for the directory a document is stored in and looks for the Path. Example /var/mobile/Containers/Data/Application/your-app-UUID)
-        
+    
         do {
             mdContent = try String(contentsOf: fileURL, encoding: .utf8) // Reads the content inside of fileURL
             print("Successfully loaded file!")
