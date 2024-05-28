@@ -25,6 +25,7 @@ struct NotesView: View {
     var body: some View {
         VStack{
             Text("Notes")
+                .font(.custom("Rosmatika", size: 50))
                 .bold()
                 .font(.title)
                 .onAppear(){

@@ -27,7 +27,7 @@ struct WelcomePopup: View {
                         
                 )
             Text("Welcome to Timeli")
-                .font(.title)
+                .font(.custom("Rosmatika", size: 70))
                 
             Text("One of Timeli's main features requires notifications to be enabled for it to work as intended.\nWould you like to enable notifications?")
                 .padding()
@@ -60,7 +60,9 @@ struct WelcomePopup: View {
     }
 }
 
-
+#Preview{
+    WelcomePopup(color: .black, isSettingUp: true, isSetUp: false)
+}
 struct SuccessfullyCreatedNewItem: View {
     var body: some View {
         VStack{

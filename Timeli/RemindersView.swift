@@ -27,6 +27,7 @@ struct RemindersView: View {
     var body: some View {
         VStack{
             Text("Reminders")
+                .font(.custom("Rosmatika", size: 50))
                 .bold()
                 .font(.title)
         }

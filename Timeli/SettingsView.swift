@@ -17,9 +17,8 @@ struct SettingsView: View {
     @State private var colorData = ColorData()
     var body: some View {
         Text("Settings")
+            .font(.custom("Rosmatika", size: 50))
             .bold()
-            .underline()
-            .font(.title)
             .tint(selectedColor)
             .onAppear(){
                 selectedColor = colorData.loadColor()
@@ -30,9 +29,9 @@ struct SettingsView: View {
         
         Group{
             Text("Enabled Features:")
+                .font(.custom("Rosmatika", size: 20))
                 .bold()
                 .underline()
-                .font(.title3)
                 
             VStack{
                 Toggle("Notes", isOn: $enableNotes)
@@ -48,9 +47,9 @@ struct SettingsView: View {
         
         Group{
             Text("Color theme:")
+                .font(.custom("Rosmatika", size: 20))
                 .bold()
                 .underline()
-                .font(.title3)
             Group{
                 ColorPicker("Main:", selection: $selectedColor)
                     .onChange(of: selectedColor){

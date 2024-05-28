@@ -23,6 +23,7 @@
 		14175BE72BE0289800F775A7 /* RemindersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14175BE62BE0289800F775A7 /* RemindersModel.swift */; };
 		14175BE92BE02AEE00F775A7 /* NewReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14175BE82BE02AEE00F775A7 /* NewReminderView.swift */; };
 		14175BEB2BE02F9E00F775A7 /* ReminderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14175BEA2BE02F9E00F775A7 /* ReminderItemView.swift */; };
+		142550042C065F0F00880B65 /* Rosmatika.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 142550032C064E6D00880B65 /* Rosmatika.ttf */; };
 		14C9BA952BFFD03100ECEBA9 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C9BA942BFFD03100ECEBA9 /* Tips.swift */; };
 		14DF95042BDB02450091CFAF /* NewToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95032BDB02450091CFAF /* NewToDoItemView.swift */; };
 		14DF95062BDB02520091CFAF /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF95052BDB02520091CFAF /* ToDoItemView.swift */; };
@@ -61,6 +62,8 @@
 		14175BE62BE0289800F775A7 /* RemindersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersModel.swift; sourceTree = "<group>"; };
 		14175BE82BE02AEE00F775A7 /* NewReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderView.swift; sourceTree = "<group>"; };
 		14175BEA2BE02F9E00F775A7 /* ReminderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderItemView.swift; sourceTree = "<group>"; };
+		142550022C064DF100880B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		142550032C064E6D00880B65 /* Rosmatika.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rosmatika.ttf; sourceTree = "<group>"; };
 		14675A0C2BEAB11B00F08B7D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		14675A0E2BEAB11B00F08B7D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		14C9BA942BFFD03100ECEBA9 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 		140D39D72BD93FF00036DBAE /* Timeli */ = {
 			isa = PBXGroup;
 			children = (
+				142550022C064DF100880B65 /* Info.plist */,
 				140D39D82BD93FF00036DBAE /* TimeliApp.swift */,
 				14175BDF2BE0230C00F775A7 /* Models */,
 				14175BE02BE0232C00F775A7 /* Notes */,
@@ -123,6 +127,8 @@
 				140CF2582C018EE800D8A9B7 /* PopUps */,
 				140D39DC2BD93FF10036DBAE /* Assets.xcassets */,
 				140D39DE2BD93FF10036DBAE /* Timeli.entitlements */,
+				142550032C064E6D00880B65 /* Rosmatika.ttf */,
+				142550002C064CCA00880B65 /* Fonts */,
 				140D39DF2BD93FF10036DBAE /* Preview Content */,
 				14057B582BE1DC10000CBD8B /* RectModifierView.swift */,
 				140CF25B2C01AAC500D8A9B7 /* Launch Screen.storyboard */,
@@ -190,6 +196,13 @@
 				14F81F222C00182800DD93AB /* TabBarButton.swift */,
 			);
 			name = TabViewer;
+			sourceTree = "<group>";
+		};
+		142550002C064CCA00880B65 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		14675A0B2BEAB11B00F08B7D /* Frameworks */ = {
@@ -278,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142550042C065F0F00880B65 /* Rosmatika.ttf in Resources */,
 				140CF25C2C01AAC500D8A9B7 /* Launch Screen.storyboard in Resources */,
 				140D39E12BD93FF10036DBAE /* Preview Assets.xcassets in Resources */,
 				140D39DD2BD93FF10036DBAE /* Assets.xcassets in Resources */,
@@ -444,6 +458,7 @@
 				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Timeli/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Timeli;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -488,6 +503,7 @@
 				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Timeli/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Timeli;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

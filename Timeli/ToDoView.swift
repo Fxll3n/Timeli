@@ -27,6 +27,7 @@ struct ToDoListView: View {
     var body: some View { 
         VStack {
             Text("To Do List")
+                .font(.custom("Rosmatika", size: 50))
                 .bold()
                 .font(.title)
                 .onChange(of: didCreateNewToDo){
