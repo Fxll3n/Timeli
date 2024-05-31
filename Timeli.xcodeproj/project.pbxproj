@@ -30,6 +30,7 @@
 		14F81F1E2C00118600DD93AB /* AnimatedTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 14F81F1D2C00118600DD93AB /* AnimatedTabBar */; };
 		14F81F232C00182800DD93AB /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F81F222C00182800DD93AB /* TabBarButton.swift */; };
 		6E38E9DA2BF97AD50032A78E /* NoteFileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38E9D92BF97AD50032A78E /* NoteFileListView.swift */; };
+		8400CF412C0A2A4600DB364E /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = 8400CF402C0A2A4600DB364E /* Neumorphic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8400CF412C0A2A4600DB364E /* Neumorphic in Frameworks */,
 				140CF2552C0188D700D8A9B7 /* PopupView in Frameworks */,
 				140D39F52BD943010036DBAE /* Markdown in Frameworks */,
 				14F81F1E2C00118600DD93AB /* AnimatedTabBar in Frameworks */,
@@ -254,6 +256,7 @@
 				140D39F42BD943010036DBAE /* Markdown */,
 				14F81F1D2C00118600DD93AB /* AnimatedTabBar */,
 				140CF2542C0188D700D8A9B7 /* PopupView */,
+				8400CF402C0A2A4600DB364E /* Neumorphic */,
 			);
 			productName = Timeli;
 			productReference = 140D39D52BD93FF00036DBAE /* Timeli.app */;
@@ -287,6 +290,7 @@
 				140D39F32BD943010036DBAE /* XCRemoteSwiftPackageReference "swiftui-markdown" */,
 				14F81F1C2C00108C00DD93AB /* XCRemoteSwiftPackageReference "AnimatedTabBar" */,
 				140CF2532C0188D700D8A9B7 /* XCRemoteSwiftPackageReference "PopupView" */,
+				8400CF3F2C0A2A4600DB364E /* XCRemoteSwiftPackageReference "neumorphic" */,
 			);
 			productRefGroup = 140D39D62BD93FF00036DBAE /* Products */;
 			projectDirPath = "";
@@ -592,6 +596,14 @@
 				minimumVersion = 0.1.2;
 			};
 		};
+		8400CF3F2C0A2A4600DB364E /* XCRemoteSwiftPackageReference "neumorphic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/costachung/neumorphic";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -609,6 +621,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 14F81F1C2C00108C00DD93AB /* XCRemoteSwiftPackageReference "AnimatedTabBar" */;
 			productName = AnimatedTabBar;
+		};
+		8400CF402C0A2A4600DB364E /* Neumorphic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8400CF3F2C0A2A4600DB364E /* XCRemoteSwiftPackageReference "neumorphic" */;
+			productName = Neumorphic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

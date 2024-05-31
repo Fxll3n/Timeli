@@ -26,7 +26,7 @@ struct SettingsView: View {
         Spacer()
         
         //Features Section
-        
+    
         Group{
             Text("Enabled Features:")
                 .font(.custom("Rosmatika", size: 20))

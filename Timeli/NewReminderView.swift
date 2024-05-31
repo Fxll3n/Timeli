@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 import UserNotifications
 import TipKit
-
+import Neumorphic
 
 
 struct NewReminderView: View {
@@ -29,7 +29,8 @@ struct NewReminderView: View {
     @State private var alertReason = ""
     @State private var text1Changed = false
     @State private var text2Changed = false
-    
+    let mainColor = Color.Neumorphic.main
+    let secondaryColor = Color.Neumorphic.secondary
     @State private var selectedColor: Color = Color.black
     @State private var colorData = ColorData()
     
@@ -37,6 +38,11 @@ struct NewReminderView: View {
         VStack{
             Group {
                 TextField("Reminder Title", text: $inputTitle)
+                    .padding()
+                                  .background(
+                                    RoundedRectangle(cornerRadius: 30).fill(mainColor)
+                                        .softInnerShadow(RoundedRectangle(cornerRadius: 30), darkShadow: Color("redButtonDarkShadow"), lightShadow: Color("redButtonLightShadow"), spread: 0.05, radius: 2)
+                                  )
                     .onChange(of: inputTitle){
                         text1Changed = true
                     }

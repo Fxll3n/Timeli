@@ -1,5 +1,5 @@
 {
-  "originHash" : "73a92bd72704263e864f4b25b4cd71ec6f7eb85a80a76f51cd7662923d4d7548",
+  "originHash" : "1ac91bef67409705295b2d25d98621a0a05acc13116b6b4a5399e18a048a89d1",
   "pins" : [
     {
       "identity" : "animatedtabbar",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "f5f342227283e76c7b49371e735516bac3caef68",
         "version" : "0.1.2"
+      }
+    },
+    {
+      "identity" : "neumorphic",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/costachung/neumorphic",
+      "state" : {
+        "branch" : "master",
+        "revision" : "03c6f7b3d27bfb28a082db2e9ffae45fbc69cb8b"
       }
     },
     {
