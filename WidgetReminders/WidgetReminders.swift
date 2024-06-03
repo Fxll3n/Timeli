@@ -41,7 +41,7 @@ struct SimpleEntry: TimelineEntry {
     let remindModel: [RemindModel]
 }
 
-struct WdigetRemindersEntryView : View {
+struct WidgetRemindersEntryView : View {
     var entry: Provider.Entry
     
     var body: some View {
@@ -86,18 +86,18 @@ struct WidgetItemView: View {
     }
 }
 
-struct WdigetReminders: Widget {
-    let kind: String = "WdigetReminders"
+struct WidgetReminders: Widget {
+    let kind: String = "WidgetReminders"
     
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             if #available(iOS 17.0, *) {
-                WdigetRemindersEntryView(entry: entry)
+                WidgetRemindersEntryView(entry: entry)
                     .containerBackground(.background, for: .widget)
             }
         }
         
-        .configurationDisplayName("Reminders Wodget")
+        .configurationDisplayName("Reminders Widget")
         .description("Shows existing reminders")
         .supportedFamilies([.systemSmall])
         .contentMarginsDisabled()
