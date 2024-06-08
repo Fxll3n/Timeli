@@ -10,20 +10,20 @@ import Markdown
 
 
 struct NotesView: View {
-    @Environment(\.modelContext) private var context
     @State var isEditing = false
     @State var showSavePopup = false
     @State var fileName = ""
     @State var showFileList = false
-    @State var files: [URL] = []
-    @FocusState private var fileNameIsFocused: Bool
-    @State private var mdContent = "abcdefghijklmnopqrstuvwxyz\n**abcdefghijklmnopqrstuvwxyz**\n*abcdefghijklmnopqrstuvwxyz*\n~abcdefghijklmnopqrstuvwxyz~\n# abcdefghijklmnopqrstuvwxyz"
-    
+    @State var showSaveList = false
+    @State var files: [URL] = []	
     @State private var selectedColor: Color = Color.black
     @State private var colorData = ColorData()
-    
+    @State private var mdContent = "abcdefghijklmnopqrstuvwxyz\n**abcdefghijklmnopqrstuvwxyz**\n*abcdefghijklmnopqrstuvwxyz*\n~abcdefghijklmnopqrstuvwxyz~\n# abcdefghijklmnopqrstuvwxyz"
+    @FocusState private var fileNameIsFocused: Bool
+    @Environment(\.modelContext) private var context
     var body: some View {
         VStack{
+            Spacer()
             Text("Notes")
                 .font(.custom("Rosmatika", size: 50))
                 .bold()
@@ -32,10 +32,6 @@ struct NotesView: View {
                     selectedColor = colorData.loadColor()
                 }
             HStack{
-                Spacer()
-                TextField("File Name", text: $fileName)
-                    .focused($fileNameIsFocused)
-                    .submitLabel(.join)
                 Spacer()
                 Group{
                     Button(action: {
@@ -50,14 +46,25 @@ struct NotesView: View {
                         }
                             
                     })
+//                    Button(action: {
+//                        saveMD()
+//                    }, label: {
+//                        ZStack{
+//                            RoundedRectangle(cornerRadius: 5.0)
+//                                .frame(width: 40, height: 30)
+//                                .foregroundStyle(selectedColor)
+//                            Text("Save")
+//                                .foregroundStyle(Color.white)
+//                        }
+//                    })
                     Button {
-                        showSavePopup = true
+                        showSaveList = true
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 5.0)
-                                .frame(width: 40, height: 30)
+                                .frame(width: 65, height: 30)
                                 .foregroundStyle(selectedColor)
-                            Text("Save")
+                            Text("Save As")
                                 .foregroundStyle(Color.white)
                         }
                     
@@ -84,20 +91,18 @@ struct NotesView: View {
                 Markdown(content: $mdContent)
             }
         } .onAppear(perform: loadMD)
-        .alert(isPresented: $showSavePopup) {
-            Alert(title: Text("Save File"), message: Text("Enter a name for the file"), primaryButton: .default(Text("Save")) {
-                saveMD()
-            }, secondaryButton: .cancel())
-        }
         .sheet(isPresented: $showFileList) {
             NoteFileList(mdContent: $mdContent)
+        }
+        .sheet(isPresented: $showSaveList){
+            NoteSavingView(mdContent: $mdContent, fileName: $fileName)
         }
     }
     
     
     func loadMD() {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! // Tells the app that the path for the documents would be inside of the fileManager intializer.
-        let fileURL = documentsDirectory.appendingPathComponent("note.md") // Looks for the directory a document is stored in and looks for the Path. Example /var/mobile/Containers/Data/Application/your-app-UUID)
+        let fileURL = documentsDirectory.appendingPathComponent("\(fileName).md") // Looks for the directory a document is stored in and looks for the Path. Example /var/mobile/Containers/Data/Application/your-app-UUID)
     
         do {
             mdContent = try String(contentsOf: fileURL, encoding: .utf8) // Reads the content inside of fileURL
@@ -108,7 +113,7 @@ struct NotesView: View {
     }
     func saveMD() {
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! // Tells the app that the path for the documents would be inside of the fileManager intializer.
-        let fileURL = documentsDirectory.appendingPathComponent("note.md") // Looks for the directory a document is stored in and looks for the Path. Example /var/mobile/Containers/Data/Application/your-app-UUID)
+        let fileURL = documentsDirectory.appendingPathComponent("\(fileName).md") // Looks for the directory a document is stored in and looks for the Path. Example /var/mobile/Containers/Data/Application/your-app-UUID)
         
         do {
             try mdContent.write(to:fileURL, atomically: true, encoding: .utf8) // Writes the content inside of mdContent to the variable fileURL
@@ -118,9 +123,6 @@ struct NotesView: View {
         }
         
     }
-    
- 
-    
 
 }
 
