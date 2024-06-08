@@ -39,7 +39,7 @@ For that reason, everything in Timeli is customizable and minimal. With Timeli, 
 ##  Features
 
 Timeli's features are COMPLETELY CUSTOMIZABLE. Meaning that you can chose, edit, and modify the features to suit you in the best way possible. Currently, Timeli has 4 confirmed features:
-1. **MarkDown based note system** - Write down notes using markdown to make them look clean and professional.
+1. **Markdown based note system** - Write down notes using markdown to make them look clean and professional.
 2. **Reminders** - Reminders are optimized Calendar events that have been crafted for simplicity and efficency, while still keeping a minimal and fresh look. (Uses notifications)
 3. **To-Do List** - Simple but powerful To-Do list to keep track of any tasks you may have. 
 4. **Settings Menu** - In the settings menu, you are given full freedom on what features you want, and how they look.
