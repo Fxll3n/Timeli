@@ -45,16 +45,18 @@ struct WidgetRemindersEntryView : View {
     var entry: Provider.Entry
     
     var body: some View {
-        VStack {
+        VStack(spacing: 4) {
             ForEach(entry.remindModel) { item in
                 
                 WidgetItemView(title: item.title, dueDate: item.dueDate)
+                
                     
                     
                     
             }
             
         }
+        .padding(3)
         .frame(width: 160, height: 100)
         
     }
@@ -67,21 +69,18 @@ struct WidgetItemView: View {
     @State var dueDate: Date
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 15.0)
-            HStack{
+            RoundedRectangle(cornerRadius: 10.0)
+            VStack(alignment: .leading){
                 Text("\(title ?? "error")")
-                    .padding()
-                Spacer()
-                Text("\((dueDate.formatted(.dateTime)) ?? "time error")")
-                    .padding()
+                    .font(.title2)
+                Text("\((dueDate.formatted(date: .abbreviated, time: .shortened)) ?? "time error")")
                     
-            }
+            }.padding(1)
             
             .font(.caption2)
             .foregroundStyle(.white)
         }
-        .frame(height: 40)
-        .padding(3)
+        .frame(height: 45)
         
     }
 }

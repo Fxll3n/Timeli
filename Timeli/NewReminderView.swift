@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 import UserNotifications
 import TipKit
-
+import WidgetKit
 
 
 struct NewReminderView: View {
@@ -61,6 +61,7 @@ struct NewReminderView: View {
                     didCreateNewItem = true
                     dismiss()
                     scheduleNotification(title: inputTitle, context: "Due now!", date: inputDueDate)
+                    WidgetCenter.shared.reloadAllTimelines()
                 }else if inputTitle == "" && inputDescrip != ""{
                     showAlert = true
                     alertReason = "Please enter a title."
