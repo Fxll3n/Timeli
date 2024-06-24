@@ -53,14 +53,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		14675A222BEAB11C00F08B7D /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
 				14E9CB052C0A32C4001E1195 /* WidgetRemindersExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		8481A74D2C066CE5001BB6A4 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -360,6 +360,7 @@
 				140D39F32BD943010036DBAE /* XCRemoteSwiftPackageReference "swiftui-markdown" */,
 				14F81F1C2C00108C00DD93AB /* XCRemoteSwiftPackageReference "AnimatedTabBar" */,
 				140CF2532C0188D700D8A9B7 /* XCRemoteSwiftPackageReference "PopupView" */,
+				6E1AE5882C29CDE700F50C50 /* XCRemoteSwiftPackageReference "OnboardingKit" */,
 			);
 			productRefGroup = 140D39D62BD93FF00036DBAE /* Products */;
 			projectDirPath = "";
@@ -567,7 +568,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Timeli/Preview Content\"";
-				DEVELOPMENT_TEAM = BWYT76Q3DS;
+				DEVELOPMENT_TEAM = JP32Y2D6YY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Timeli/Info.plist;
@@ -589,7 +590,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.Timeli;
+				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.HourGlass.Timeli.Fix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -612,7 +613,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Timeli/Preview Content\"";
-				DEVELOPMENT_TEAM = BWYT76Q3DS;
+				DEVELOPMENT_TEAM = JP32Y2D6YY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Timeli/Info.plist;
@@ -634,7 +635,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.Timeli;
+				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.HourGlass.Timeli.Fix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -653,7 +654,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetRemindersExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWYT76Q3DS;
+				DEVELOPMENT_TEAM = JP32Y2D6YY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WidgetReminders/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetReminders;
@@ -665,7 +666,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.Timeli.WidgetReminders;
+				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.HourGlass.Timeli.Fix.WidgetReminders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -683,7 +684,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetRemindersExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BWYT76Q3DS;
+				DEVELOPMENT_TEAM = JP32Y2D6YY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WidgetReminders/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetReminders;
@@ -695,7 +696,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.Timeli.WidgetReminders;
+				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.HourGlass.Timeli.Fix.WidgetReminders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -761,6 +762,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.1.2;
+			};
+		};
+		6E1AE5882C29CDE700F50C50 /* XCRemoteSwiftPackageReference "OnboardingKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielsaidi/OnboardingKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
