@@ -31,8 +31,10 @@
 
 ---
 ##  Overview
-Timeli is a minimal note taking app inspired by Notion's simple interface. We, the Timeli developers, despise an interface where you are bombarded with features and notifications.
-For that reason, everything in Timeli is customizable and minimal. With Timeli, you should do things your way.
+
+Timeli is a minimal note taking app which is inspired by other applications. We the Timeli Developers have always despised a overcluttered, sensory overload interface that always wants your attention.
+For this reason alone, everything inside of Timeli is customizable, and minmal. It's not our app, it's your app. The one in control should be able to do it their way.
+
 ---
 
 ##  Features
