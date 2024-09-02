@@ -1,5 +1,6 @@
-
-<img src="https://github.com/Fxll3n/Timeli/blob/main/Logo.jpeg" alt="Timeli Logo" width="300" height="200">
+<p align="center>
+<img src="https://github.com/Fxll3n/Timeli/blob/main/Logo.jpeg" alt="Timeli Logo" width="512" height="512">
+</p>
 <p align="center">
     <h1 align="center">TIMELI</h1>
 
