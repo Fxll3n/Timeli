@@ -1,5 +1,7 @@
-
 <p align="center">
+	<img src="https://github.com/Fxll3n/Timeli/blob/main/Logo.jpeg" alt="Timeli Logo" width="256" height="256">
+</p>
+<p align="center">	
     <h1 align="center">TIMELI</h1>
 
 </p>
@@ -28,12 +30,11 @@
 > - [ Acknowledgments](#-acknowledgments)
 
 ---
-
 ##  Overview
 
-<p align="center">![logo](Logo.png)</p>
-Timeli is a minimal note taking app inspired by Notion's simple interface. We, the Timeli developers, despise an interface where you are bombarded with features and notifications.
-For that reason, everything in Timeli is customizable and minimal. With Timeli, you should do things your way.
+Timeli is a minimal note taking app which is inspired by other applications. We the Timeli Developers have always despised a overcluttered, sensory overload interface that always wants your attention.
+For this reason alone, everything inside of Timeli is customizable, and minmal. It's not our app, it's your app. The one in control should be able to do it their way.
+
 ---
 
 ##  Features
@@ -54,8 +55,5 @@ Timeli's features are COMPLETELY CUSTOMIZABLE. Meaning that you can chose, edit,
 
 ## Disclaimer
 - This app IS NOT open source, you cannot use our code for any purpose or reason.
-
-[**Return**](#-quick-links)
-
 ---
 
