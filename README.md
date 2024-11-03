@@ -53,7 +53,3 @@ Timeli's features are COMPLETELY CUSTOMIZABLE. Meaning that you can chose, edit,
 - Benjamin Anabe - Developer/Graphics
 - Shneider Lambert - Developer
 
-## Disclaimer
-- This app IS NOT open source, you cannot use our code for any purpose or reason.
----
-
